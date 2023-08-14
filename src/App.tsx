@@ -77,6 +77,10 @@ import { useIdleTimer } from 'react-idle-timer';
 import ChangePhone from './UserProfile/ChangePhone';
 import TagManager from 'react-gtm-module';
 
+import ReactGA from 'react-ga';
+  const TRACKING_ID = "UA-281794877-1"; // OUR_TRACKING_ID
+  ReactGA.initialize('UA-281794877-1');
+
 const tagManagerArgs={
     gtmId:'GTM-KRNZPVC',
     dataLayer: {event: 'pageview'},
@@ -84,6 +88,13 @@ const tagManagerArgs={
 TagManager.initialize(tagManagerArgs)
 
 function App() {
+  const useAnalyticsEventTracker = (category="Blog category") => {
+    const eventTracker = (action = "test action", label = "test label") => {
+      ReactGA.event({category, action, label});
+    }
+    return eventTracker;
+  }
+  const gaEventTracker = useAnalyticsEventTracker('Contact us');
   let history = useHistory();
   const [userInfo, setUserInfo] =
     useRecoilState<Partial<UserObject>>(userInfoState);
@@ -423,9 +434,7 @@ function App() {
       <div role="alert">
         <p>Something went wrong:</p>
         <pre>{errorFallbackProps.error.message}</pre>
-        <button
-          onClick={(el) => errorFallbackProps.resetErrorBoundary()}
-        >
+        <button onClick={(el) => errorFallbackProps.resetErrorBoundary()}>
           Try again
         </button>
       </div>
@@ -434,6 +443,7 @@ function App() {
 
   return (
     <div className="App">
+      <a href="#" onClick={()=>gaEventTracker('call')}>Call Us</a>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <MessageContext.Provider
           value={{
