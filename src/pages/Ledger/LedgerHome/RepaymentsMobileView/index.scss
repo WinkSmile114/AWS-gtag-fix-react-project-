@@ -1,0 +1,234 @@
+.nameandstatuscontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.loan-name {
+  display: flex;
+  width: 50%;
+  max-height: 1.2rem;
+}
+.loan-name-text {
+  margin-left: 4px;
+}
+.repayment-status {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.loan-id-image-wrapper-mobile {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  justify-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.status-paid {
+  color: #17b794;
+  background: #edf7f0;
+  border-radius: 5px;
+  margin: 0;
+  width: 38px;
+  height: 25px;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.045em;
+}
+.status-active {
+  border-radius: 5px;
+
+  width: 50px;
+  height: 25px;
+  left: 5px;
+  top: 25.5px;
+  color: #ff754c;
+  background: #fff3dc;
+
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.5px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.045em;
+}
+
+.status-pending {
+  border-radius: 5px;
+  margin: 0;
+  width: fit-content;
+  height: 25px;
+  color: #653494;
+  background: #f4f2fa;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.045em;
+}
+.outstandingBalanceandPayoffDateContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.outstandingBalancecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.outstandingBalance-Amount {
+  width: 99px;
+  height: 24px;
+
+  /* Heading / Bold / H6 */
+
+  font-family: 'causten-extra-bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+
+  /* Accent/Danger / Danger - 800 */
+
+  color: #d30808;
+}
+.outstandingBalance-AmountHeader {
+  max-width: 100%;
+  height: 19px;
+
+  /* Body / Regular / Body 4 */
+
+  font-family: 'Causten';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  /* identical to box height, or 19px */
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.045em;
+
+  /* Typhograpy/Text - 3 */
+
+  color: #4e5d78;
+  margin-bottom: 6px;
+}
+.balanceandpayoffdatedivider {
+  width: 0px;
+  height: 51px;
+
+  /* Grayscale / Black - 300 */
+
+  border: 1px solid #dcdfe3;
+}
+.PayoffDateContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.payoffdate-header {
+  height: 19px;
+
+  /* Body / Regular / Body 4 */
+
+  font-family: 'Causten';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  /* identical to box height, or 19px */
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.045em;
+
+  /* Typhograpy/Text - 3 */
+
+  color: #4e5d78;
+  margin-bottom: 6px;
+}
+.payoffdate-date {
+  height: 24px;
+
+  /* Heading / Bold / H6 */
+
+  font-family: 'Causten';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+
+  /* Typhograpy/Text - 2 */
+
+  color: #323b4b;
+}
+.percentPaidContainer {
+  margin-top: 20px;
+}
+.percentPaidcontainer-amountpaidandpercentagepaid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.percentpaid-amountpaid {
+  width: 78px;
+  height: 22px;
+
+  /* Body / Regular / Body 3 */
+
+  font-family: 'Causten';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  /* identical to box height, or 22px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+
+  /* Typhograpy/Text - 2 */
+
+  color: #323b4b;
+
+  border-radius: 2px;
+}
+.percentagepaid {
+  background: #edf7f0;
+  color: #17b794;
+  border-radius: 6px;
+  padding: 3px;
+}
+.progressBar {
+  display: flex;
+}

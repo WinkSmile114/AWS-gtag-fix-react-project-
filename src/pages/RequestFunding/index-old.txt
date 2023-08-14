@@ -1,0 +1,392 @@
+import { DateTime } from 'luxon'
+import { useEffect, useState } from 'react'
+import { getClient } from '../../api-utils/general-utils'
+import { DealStandardForm, BankAccount, CreateBankAccountDto, DefaultApi, GetAccountDto } from '../../api-utils/generated-client'
+import FooterButtons from '../../Footer/footer-buttons'
+import { formatNumberAsDollars, isFeatureOn } from '../../utils'
+import Loader from '../../widgets/Loader'
+import PayroButton from '../../widgets/PayroButton'
+import Confirm from './Confirm'
+import ConnectBankAccounts from './ConnectBankAccounts/connect-banks'
+import './index.scss'
+import PayrollToFundDetails from './PayrollToFundDetails'
+import RepaymentDate from './RepaymentDate'
+import { createRepayment, getFiles, getMostRecentNewRepayment, updateRepayment, uploadFiles } from './utils'
+import Funded from './Funded'
+import OnboardingWrapper from './Wrappers/onboarding'
+import RepeatFundingWrapper from './Wrappers/repeatFunding'
+
+import LedgerHome from '../Ledger/LedgerHome'
+import { useRecoilValue, useSetRecoilState, useRecoilState } from 'recoil'
+import {
+    depositBankState,
+    depositBankRoutingNumberConfirmState,
+    depositBankAccountNumberConfirmState,
+    withdrawalBankState,
+    withdrawalBankRoutingNumberConfirmState,
+    withdrawalBankAccountNumberConfirmState,
+    fundingStepState,
+    numOfWeeksState
+} from '../../recoil-state/request-funding-states'
+import {
+    gotPayrollInfoFromFinchState,
+    finchPayrollInfoState,
+    isThereFutureFinchPayroll
+} from '../../recoil-state/finch-states'
+
+/*
+THIS PAGE EXPECTS THERE TO BE A REPAYMENT ALREADY CREATED AND IN STATUS "New"
+The Repayment is created as soon as the user loads the ledger dashboard or as soon as they load the approved for funding page
+The reason there is no creation here, is because the lag in the data sync makes it unreliable to create and then see the record.
+*/
+
+interface RequestFundingProps {
+    section: 'onboarding' | 'more-funding'
+    // fundingStep: 'funding-amount' | 'congrats'
+
+}
+
+export default (props: RequestFundingProps) => {
+    //const defaultFundingStep = props.section ? props.fundingStep : props.fundingStep;
+
+    //const defaultFundingStep = props.section == 'onboarding' ? 'congrats' : 'funding-amount';
+
+   // const [fundingStep, setFundingStep] = useRecoilState<'congrats' | 'funding-amount' | 'verify-payroll' | 'repayment-date' | 'bank-info' | 'confirm' | 'funded'>(fundingStepState)
+
+    const finchFeatureOn: boolean = isFeatureOn('Finch')
+    //const [gotPayrollInfoFromFinch, setGotPayrollInfoFromFinch] = useState(false)
+    const [gotPayrollInfoFromFinch, setGotPayrollInfoFromFinch] = useRecoilState(gotPayrollInfoFromFinchState)
+    const [repaymentRecord, setRepaymentRecord] = useState<Partial<DealStandardForm>>({})
+    const [accountRecord, setAccountRecord] = useState<GetAccountDto>()
+    const [loadedRepayment, setLoadedRepayment] = useState<boolean>(false)
+    const [finishedloadingFinch, setFinishedLoadingFinch] = useState<boolean>(finchFeatureOn ? false : true)
+    // const [finchPayrollInfo, setFinchPayrollInfo] = useState<any[]>()
+    const [finchPayrollInfo, setFinchPayrollInfo] = useRecoilState<any>(finchPayrollInfoState)
+    const [isThereFuturePayroll, setIsThereFuturePayroll] = useRecoilState(isThereFutureFinchPayroll)
+    const [uploadedFiles, setUploadedFiles] = useState<string[]>([])
+    const [gotApi, setGotApi] = useState<boolean>(false)
+
+    const [bankAccounts, setBankAccounts] = useState<BankAccount[]>([])
+
+
+    const setDepositBank = useSetRecoilState(depositBankState)
+    const setDepositBankRoutingNumberConfirm = useSetRecoilState(depositBankRoutingNumberConfirmState)
+    const setDepositBankAccountNumberConfirm = useSetRecoilState(depositBankAccountNumberConfirmState)
+
+    const setWithdrawalBank = useSetRecoilState(withdrawalBankState)
+    const setWithdrawalBankRoutingNumberConfirm = useSetRecoilState(withdrawalBankRoutingNumberConfirmState)
+    const setWithdrawalBankAccountNumberConfirm = useSetRecoilState(withdrawalBankAccountNumberConfirmState)
+
+    //used for child component to let us know if it's complete
+    const [filledOutAllBankInfo, setFilledOutAllBankInfo] = useState<boolean>(false)
+    const [showLoader, setShowLoader] = useState<boolean>(false)
+
+    const initializeMostRecentRepayment = async (client: DefaultApi): Promise<GetRepaymentDto | undefined> => {
+        const mostRecentNewRepayment = await getMostRecentNewRepayment(client)
+        if (mostRecentNewRepayment) {
+            setRepaymentRecord({ ...mostRecentNewRepayment, selected_number_of_weeks_to_borrow: mostRecentNewRepayment.selected_number_of_weeks_to_borrow ?? 2 })
+            const payrollFiles = await getFiles(client)
+            setUploadedFiles(payrollFiles)
+        }
+        return mostRecentNewRepayment
+    }
+
+    const pollForRepayment = (client: DefaultApi) => {
+        setTimeout(async () => {
+            const newRepayment = await initializeMostRecentRepayment(client)
+            if (!newRepayment) {
+                pollForRepayment(client)
+            } else {
+                await handleAccountAndBanks(newRepayment, client)
+            }
+        }, 2000)
+    }
+
+    const initializeDepositBankInfo = (theMostRecentRepayment: GetRepaymentDto, bankAccountsFromApi: BankAccount[]) => {
+        if (theMostRecentRepayment.bank_account_uuid_for_deposit) {
+            const depositBankInfo = bankAccountsFromApi.find(bankRecord => {
+                if (bankRecord.uuid == theMostRecentRepayment.bank_account_uuid_for_deposit) {
+                    return true;
+                }
+            })
+            console.log(depositBankInfo, 'bankinfo')
+            if (depositBankInfo) {
+
+                setDepositBank({
+                    bank_account_number: depositBankInfo.bank_account_number,
+                    bank_routing_number: depositBankInfo.bank_routing_number,
+                    bank_name: depositBankInfo.bank_name,
+                    uuid: depositBankInfo.uuid
+                })
+                setDepositBankAccountNumberConfirm(depositBankInfo.bank_account_number!)
+                setDepositBankRoutingNumberConfirm(depositBankInfo.bank_routing_number!)
+            }
+
+        } else {
+
+        }
+    }
+
+    const initializeWithdrawalBankInfo = (theMostRecentRepayment: GetRepaymentDto, bankAccountsFromApi: BankAccount[]) => {
+        if (theMostRecentRepayment.bank_account_uuid_for_withdrawal) {
+            const withdrawalBankInfo = bankAccountsFromApi.find(bankRecord => {
+                if (bankRecord.uuid == theMostRecentRepayment.bank_account_uuid_for_withdrawal) {
+                    return true;
+                }
+            })
+            if (withdrawalBankInfo) {
+
+                setWithdrawalBank({
+                    bank_account_number: withdrawalBankInfo.bank_account_number,
+                    bank_routing_number: withdrawalBankInfo.bank_routing_number,
+                    bank_name: withdrawalBankInfo.bank_name,
+                    uuid: withdrawalBankInfo.uuid
+                })
+                setWithdrawalBankAccountNumberConfirm(withdrawalBankInfo.bank_account_number!)
+                setWithdrawalBankRoutingNumberConfirm(withdrawalBankInfo.bank_routing_number!)
+            }
+
+        }
+    }
+
+    const handleAccountAndBanks = async (mostRecentNewRepayment: GetRepaymentDto, client: DefaultApi) => {
+        const bankRes = await client.bankAccountsControllerFindAll()
+        setBankAccounts(bankRes.data)
+
+        const accountsRes = await client.accountsControllerGetMyInfo()
+        setAccountRecord(accountsRes.data)
+
+        const didNotAlreadyConnectFinicity = bankRes.data.length < 1
+        if (mostRecentNewRepayment && props.section == 'onboarding' && didNotAlreadyConnectFinicity) {
+            initializeDepositBankInfo(mostRecentNewRepayment, bankRes.data)
+            initializeWithdrawalBankInfo(mostRecentNewRepayment, bankRes.data)
+        }
+
+        const weAlreadyHaveBankInfo = bankRes.data.length > 0;
+        if (props.section == 'more-funding' || weAlreadyHaveBankInfo) {
+            let depositBankFromApi = bankRes.data.find(singleBank => singleBank.uuid == accountsRes.data?.deposit_bank_uuid)
+            let withdrawalBankFromApi = bankRes.data.find(singleBank => singleBank.uuid == accountsRes.data?.withdrawal_bank_uuid)
+            console.log('dep with from api', depositBankFromApi, withdrawalBankFromApi)
+            if (!depositBankFromApi) {
+                depositBankFromApi = bankRes.data[0]
+            }
+            if (!withdrawalBankFromApi) {
+                withdrawalBankFromApi = bankRes.data[0]
+            }
+            setDepositBank(depositBankFromApi)
+            setDepositBankAccountNumberConfirm(depositBankFromApi.bank_account_number!)
+            setDepositBankRoutingNumberConfirm(depositBankFromApi.bank_routing_number!)
+            setWithdrawalBank(withdrawalBankFromApi)
+            setWithdrawalBankAccountNumberConfirm(withdrawalBankFromApi.bank_account_number!)
+            setWithdrawalBankRoutingNumberConfirm(withdrawalBankFromApi.bank_routing_number!)
+            if (!mostRecentNewRepayment?.bank_account_uuid_for_deposit) {
+                await client.repaymentsControllerUpdate(mostRecentNewRepayment?.uuid as string, {
+                    bank_account_uuid_for_deposit: (depositBankFromApi as BankAccount).uuid,
+                    bank_account_uuid_for_withdrawal: (withdrawalBankFromApi as BankAccount).uuid,
+                })
+            }
+            setRepaymentRecord({
+                ...mostRecentNewRepayment,
+                bank_account_uuid_for_deposit: (depositBankFromApi as BankAccount).uuid,
+                bank_account_uuid_for_withdrawal: (withdrawalBankFromApi as BankAccount).uuid
+            })
+        }
+    }
+
+
+
+    useEffect(() => {
+
+
+        async function getApi() {
+            const client = await getClient()
+            if (!client) {
+                return
+            }
+
+
+            const mostRecentNewRepayment = await initializeMostRecentRepayment(client)
+            if (!mostRecentNewRepayment) {
+                await client.repaymentsControllerCreate({
+                    funding_amount: 0,
+                    payroll_cash_due: 0,
+                    payroll_due_date: new Date().toISOString()
+                })
+                pollForRepayment(client)
+                return
+            }
+
+            //---------------------------------handle banks ------------------------------------------------------------------
+
+            await handleAccountAndBanks(mostRecentNewRepayment, client)
+            //---------------------------------end handle banks -----------------------------------------------------------------------------
+
+
+
+
+            // const bankAccounts = await client.bankAccountsControllerFindAll()
+            // setWithdrawalBank(bankAccounts.data[0])
+            // setDepositBank(bankAccounts.data[0])
+        }
+
+        getApi().then(_ => {
+            setGotApi(true)
+        })
+    }, [])
+
+
+
+    const saveRepayment = async (dataToSave: UpdateRepaymentDto) => {
+        const client = await getClient()
+        if (!client) {
+            return
+        }
+
+        if (repaymentRecord.uuid) {
+            console.log('gonna update', dataToSave)
+            await updateRepayment(dataToSave, repaymentRecord.uuid, client)
+            const mostRecentNewRepayment = await getMostRecentNewRepayment(client)
+            if (mostRecentNewRepayment) {
+                setRepaymentRecord(mostRecentNewRepayment)
+            }
+        }
+    }
+
+    const uploadTheFiles = async (fileToUpload: any[]) => {
+        const client = await getClient()
+        if (client) {
+            await uploadFiles(fileToUpload, client)
+            const gottenFiles = await getFiles(client)
+            setUploadedFiles(gottenFiles)
+        }
+
+    }
+
+    const getNewUploadedFiles = () => getClient().then(client => {
+        if (!client) {
+            return
+        }
+        getFiles(client).then(gottenFiles => setUploadedFiles(gottenFiles))
+    })
+
+    if (!repaymentRecord.uuid || !gotApi) {
+        return <Loader />
+    }
+
+    if (!accountRecord || typeof (accountRecord.total_outstanding_amount) == 'undefined') {
+        return <Loader />
+    }
+
+    if (!accountRecord.approved_credit_amount || accountRecord.approved_credit_amount < 1) {
+        return <div>Sorry, it seems like you are not currently approved for credit</div>
+    }
+    const availableAmount = accountRecord.credit_amount_available ?? 0
+    if (availableAmount < 1) {
+        return <div>Your available credit is current {formatNumberAsDollars(availableAmount)}</div>
+    }
+
+    const isMainInfoNextDisabled = (): boolean => {
+
+
+         if ((isThereFuturePayroll=="no") && uploadedFiles.length < 1 ) {
+            return true;
+        }
+                   
+        if (!repaymentRecord) {
+            return true
+        }
+        if (repaymentRecord && (repaymentRecord.funding_amount ?? 0) < 1) {
+            return true;
+        }
+        if ((repaymentRecord.funding_amount ?? 0) > availableAmount) {
+            return true
+        }
+        if ((repaymentRecord.funding_amount ?? 0) < 5000) {
+            return true
+        }
+        if (!repaymentRecord.selected_number_of_weeks_to_borrow) {
+            return true
+        }
+        console.log(repaymentRecord)
+        return false;
+
+    }
+
+    const activateReferral = async () => {
+        setShowLoader(true)
+        const client = await getClient()
+        if (!client) {
+            return
+        }
+        let paybackUpdateAndStatusUpdate: UpdateRepaymentDto = {
+            payback_date: DateTime.now().plus({ weeks: repaymentRecord.selected_number_of_weeks_to_borrow }).toISODate(),
+            status: 'Active'
+
+        }
+        await client.repaymentsControllerUpdate(repaymentRecord.uuid as string, paybackUpdateAndStatusUpdate)
+        setShowLoader(false)
+
+    }
+
+    if (showLoader) {
+        return <Loader
+            message="Your request is being processed.  Hold on tight."
+        />
+    }
+
+    if (props.section == 'onboarding') {
+        return <OnboardingWrapper
+            accountRecord={accountRecord}
+            bankAccounts={bankAccounts}
+            setBankAccounts={(bankAccountArray: BankAccount[]) => setBankAccounts(bankAccountArray)}
+            fundingStep={fundingStep}
+            repaymentRecord={repaymentRecord}
+            setRepaymentRecord={setRepaymentRecord}
+            finchPayrollInfo={finchPayrollInfo}
+            setFinchPayrollInfo={setFinchPayrollInfo}
+            availableAmount={availableAmount}
+            uploadTheFiles={uploadTheFiles}
+            getNewUploadedFiles={getNewUploadedFiles}
+            uploadedFiles={uploadedFiles}
+            saveRepayment={saveRepayment}
+            setFundingStep={setFundingStep}
+            section={props.section}
+            isMainInfoNextDisabled={isMainInfoNextDisabled}
+            filledOutAllBankInfo={filledOutAllBankInfo}
+            setFilledOutAllBankInfo={setFilledOutAllBankInfo}
+            activateReferral={activateReferral}
+            setGotPayrollInfoFromFinch={setGotPayrollInfoFromFinch}
+
+        />
+
+
+    } else {
+        return (
+            <RepeatFundingWrapper
+                bankAccounts={bankAccounts}
+                accountRecord={accountRecord}
+                fundingStep={fundingStep}
+                repaymentRecord={repaymentRecord}
+                setRepaymentRecord={setRepaymentRecord}
+                finchPayrollInfo={finchPayrollInfo}
+                setFinchPayrollInfo={setFinchPayrollInfo}
+                availableAmount={availableAmount}
+                uploadTheFiles={uploadTheFiles}
+                getNewUploadedFiles={getNewUploadedFiles}
+                uploadedFiles={uploadedFiles}
+                saveRepayment={saveRepayment}
+                setFundingStep={setFundingStep}
+                section={props.section}
+                isMainInfoNextDisabled={isMainInfoNextDisabled}
+                filledOutAllBankInfo={filledOutAllBankInfo}
+                setFilledOutAllBankInfo={setFilledOutAllBankInfo}
+                activateReferral={activateReferral}
+                setGotPayrollInfoFromFinch={setGotPayrollInfoFromFinch}
+            />)
+    }
+
+}
+
+
+
+

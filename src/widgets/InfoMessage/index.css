@@ -1,0 +1,25 @@
+.info-blurb {
+  display: flex;
+  flex-direction: row;
+  color: #323b4b;
+  font-size: 12px;
+  margin-top: -1px;
+  border-radius: 12px;
+  padding: 15px;
+  align-items: center;
+}
+
+.info-blurb.yellow {
+  background-color: #fff6e0;
+  color: #a34e00;
+}
+
+.info-icon {
+  margin-right: 10px;
+  /* background: rgba(255, 180, 67, 0.2);
+    border-radius: 30px; */
+}
+.message-text-style {
+  font-size: 13.5px;
+  letter-spacing: 0.025em;
+}

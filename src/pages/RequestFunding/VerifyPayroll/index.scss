@@ -1,0 +1,115 @@
+@import '../../../common-styles.scss';
+
+.payroll-record {
+  display: flex;
+  margin-top: 7px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payroll-record-label {
+  text-align: left;
+  font-size: 11px;
+  margin-top: 17px;
+}
+
+.we-prestandard {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.date-and-cash {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.finance-numbers {
+  margin-top: 5px;
+}
+
+// .funding-amount {
+//   grid-column-start: 1;
+//   grid-column-end: 2;
+//   padding-right: 20px;
+// }
+
+.line-of-credit {
+  color: #8a94a6;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-left: 21px;
+}
+
+#line-of-credit-label {
+  font-size: 12px;
+  line-height: 155%;
+  margin-bottom: -12px;
+}
+
+#line-of-credit-number {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.line-of-credit-bubble {
+  margin-top: 30px;
+}
+
+.amount-you-want-to-finance-label {
+  color: #2f353b;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+
+  margin-bottom: -6px;
+  margin-top: 40px;
+}
+
+#available-credit-label {
+  color: $typography-text-4;
+  letter-spacing: 0.045em;
+  font-size: 12px;
+  line-height: 155%;
+  font-weight: 400;
+}
+
+#available-credit-amount {
+  color: $typography-text-4;
+  letter-spacing: 0.015em;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+.payroll-to-fund-step {
+  color: $typography-text-1;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+}
+
+#amount-you-want-to-finance-label {
+  margin-bottom: 0px;
+}
+
+#verify-payroll #request-funding-title-wrapper.more-funding {
+  margin-bottom: -4px;
+}
+
+#payroll-verified {
+  text-align: center;
+  margin-top: -13px;
+}
+
+#no-future-payroll {
+  color: #ff9a3d;
+  font-size: 14px;
+  background: rgba(255, 154, 61, 0.1);
+  padding: 9px;
+  border-radius: 6px;
+}

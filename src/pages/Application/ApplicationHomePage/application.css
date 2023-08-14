@@ -1,0 +1,25 @@
+.screenNav {
+  border: 1px solid grey;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 7px;
+  max-width: 300px;
+}
+
+#application-pages-container {
+  width: 560px;
+  max-width: 100%;
+}
+
+#application-pages-container-wrapper.main-body {
+  padding-top: 1px;
+  margin-bottom: 30px;
+}
+
+#application-pages-container-wrapper {
+  margin-bottom: 30px;
+}
+
+#section-marker-container {
+  float: left;
+}

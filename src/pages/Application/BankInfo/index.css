@@ -1,0 +1,31 @@
+.horizontal-divider {
+  background-color: #dcdfe3;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.statement-explanation {
+  color: #8a94a6;
+  font-size: 12px;
+}
+
+.manual-upload-title {
+  margin-bottom: 3px;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  color: #323b4b;
+}
+.uploaded-file-name {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.015em;
+  color: #2f353b;
+}

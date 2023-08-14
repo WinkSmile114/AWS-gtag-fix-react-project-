@@ -1,0 +1,932 @@
+#dashboard-main-container {
+  padding: 0px 3px 3px 3px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 1160px;
+  max-width: 100%;
+  z-index: 3;
+}
+#dashboard-home-container {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: auto;
+  max-width: 100%;
+}
+.header-highlight-container-dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.detail-container-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 34px;
+  // justify-content: space-evenly;
+  width: 363.33px;
+  height: 170px;
+  background: #ffffff;
+  box-shadow: 0px 23px 44px rgba(31, 27, 49, 0.03);
+  border-radius: 18px;
+}
+.detail-container-dashboard-bank {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 22px;
+  // justify-content: space-evenly;
+  width: 363.33px;
+  height: 170px;
+  background: #ffffff;
+  box-shadow: 0px 23px 44px rgba(31, 27, 49, 0.03);
+  border-radius: 18px;
+}
+
+.view-all-link-style {
+  color: #4c2d6a;
+  letter-spacing: 0.045em;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dashboard-container-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 40px;
+  // height: 586px;
+}
+.no-repayments-dashboard-white-box {
+  width: 760px;
+  height: 546px;
+
+  /* BG 4 */
+
+  background: #ffffff;
+  /* Dashboard Card */
+
+  box-shadow: 0px 23px 44px rgba(31, 27, 49, 0.03);
+  border-radius: 18px;
+}
+.fund-payroll-container {
+  width: 760px;
+  height: 173px;
+
+  background: #f4f2fa;
+  border: 1px solid #e0ddf3;
+  box-shadow: 0px 23px 44px rgba(31, 27, 49, 0.03);
+  border-radius: 18px;
+}
+#fund-payroll-and-recent-payrolls {
+  display: flex;
+  flex-direction: column;
+}
+.fund-payroll-no-repayments-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 25px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: none;
+}
+.fund-payroll-no-repayments-text-style-one {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 125%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #323b4b;
+}
+.fund-payroll-no-repayments-text-style-two {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 155%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 0.035em;
+  margin-top: -20px;
+  color: #4e5d78;
+}
+.helpful-tools-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 34px;
+  width: 365px;
+  height: 546px;
+  background: #ffffff;
+  box-shadow: 0px 23px 44px rgba(31, 27, 49, 0.03);
+  border-radius: 18px;
+}
+.recent-payroll-funded-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+  padding: 40px;
+  width: 760px;
+  height: 343px;
+  background: #ffffff;
+  box-shadow: 0px 23px 44px rgba(31, 27, 49, 0.03);
+  border-radius: 18px;
+}
+.announcements-container {
+  margin-top: 30px;
+  display: inline-grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 12px;
+  justify-content: center;
+  padding: 25px;
+  width: 1160px;
+  height: 190px;
+  max-width: 100%;
+  align-items: center;
+  background-color: (32, 21, 56, 0.12);
+  background: rgba(76, 45, 106, 2);
+  border-radius: 20px;
+  filter: drop-shadow(0px 30px 40px rgba(32, 21, 56, 0.12));
+}
+#half-circle-one {
+  position: absolute;
+  top: 85%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  height: 77px;
+  width: 155px;
+  opacity: 0.2;
+  border-radius: 150px 150px 0 0;
+  border-top: 2px solid #9d92e2;
+}
+#half-circle-two {
+  position: absolute;
+  top: 94%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 106px;
+  opacity: 0.2;
+  border-radius: 150px 150px 0 0;
+  border-top: 2px solid #9d92e2;
+}
+#half-circle-three {
+  position: absolute;
+  top: 100%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  height: 35px;
+  width: 70px;
+  opacity: 0.2;
+  border-radius: 150px 150px 0 0;
+  border-top: 2px solid #9d92e2;
+}
+#half-circle-thick {
+  position: absolute;
+  top: 20%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  height: 75px;
+  width: 150px;
+  opacity: 0.2;
+  border-radius: 0 0 150px 150px;
+  border-bottom: 30px solid rgba(157, 146, 226, 0.3);
+  border-left: 30px solid rgba(157, 146, 226, 0.4);
+  border-right: 30px solid rgba(157, 146, 226, 0.2);
+}
+
+#half-circle-small-one {
+  position: absolute;
+  top: 90%;
+  left: 40px;
+  transform: translate(-50%, -50%);
+  height: 69px;
+  width: 80px;
+  opacity: 0.2;
+  border-radius: 10px 110px 0 0;
+  border-top: 2px solid rgba(157, 146, 226, 1);
+
+  // border-right: 2px solid rgba(157, 146, 226, 1);
+}
+#half-circle-small-two {
+  position: absolute;
+  top: 95%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  height: 42px;
+  width: 50px;
+  opacity: 0.2;
+  border-radius: 10px 150px 0 0;
+  border-top: 2px solid rgba(157, 146, 226, 1);
+  // border-left: 2px solid rgba(157, 146, 226, 1);
+  // border-right: 2px solid rgba(157, 146, 226, 0.9);
+}
+.arrow-wrapper {
+  width: 42px;
+  height: 42px;
+  padding: 11px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.announcements-arrow-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  max-width: 100%;
+  justify-content: space-between;
+
+  margin-top: -110px;
+}
+.dashboard-header-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  color: #4e5d78;
+}
+.dashboard-header-value {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #2f353b;
+
+  font-weight: bold;
+}
+.your-next-payroll-wrapper {
+  padding: 5px 12px;
+}
+.outstanding-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+  padding-left: 10px;
+}
+.outstanding-amount-orange-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 110px;
+  height: 31px;
+  background: #fdf5ee;
+  border-radius: 7px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #ff7c04;
+  padding: 5px 20px 5px 22px;
+}
+.outstanding-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: -33px;
+}
+.payroll-amount {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+
+  color: #653494;
+}
+.numbers {
+  font-weight: 600;
+}
+.payroll-numbers-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: -33px;
+  width: 210px;
+  justify-content: space-between;
+}
+.payroll-date-and-text-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 220px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -30px;
+}
+.no-next-payroll-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 0.035em;
+  color: #4e5d78;
+}
+.dashboard-in-two-days-text-style {
+  background: #ff9a3d;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #f4f2fa;
+  height: fit-content;
+  padding: 4px 8px;
+  padding-left: 10px;
+}
+.fund-payroll-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.fund-payroll-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: -80px;
+  margin-right: auto;
+  z-index: 3;
+  align-items: center;
+  justify-items: end;
+}
+
+.fund-payroll-icon {
+  // margin-top: 20px;
+  margin-left: -8px;
+}
+.fund-your-payroll-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 125%;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #323b4b;
+}
+.request-button-wrapper {
+  margin-left: 80px;
+}
+.helpful-tools-container {
+  // margin-top: 30px;
+}
+
+.helpful-tools-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.075em;
+  color: #4c2d6a;
+  font-family: 'causten-bold';
+}
+.payro-announcements-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 295px;
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.payro-announcements-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+}
+.helpful-tools-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin-top: 40px;
+  width: 297px;
+  height: 371.87px;
+  justify-content: space-between;
+}
+.helpful-tool-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 297px;
+  height: 99.29px;
+  margin-top: 35px;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #e4e4e4;
+}
+.helpful-tool-wrapper-request-more {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 297px;
+  height: 99.29px;
+  margin-top: 35px;
+  justify-content: space-evenly;
+}
+.helpful-tools-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+  color: #4c2d6a;
+}
+#helpful-tools-circle {
+  padding: 17px;
+  width: 55.29px;
+  height: 55.29px;
+  background: #f4f2fa;
+  border-radius: 100px;
+}
+.text-and-icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.recent-payroll-funded-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: -12.5px;
+}
+.recent-payroll-next-scheduled-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  width: 274px;
+  height: 254px;
+  // background-color: fuchsia;
+  margin-top: 15px;
+}
+.recent-payroll-next-scheduled-wrapper {
+  // width: 290px;
+  height: 82px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.payment-icon-and-text-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+}
+.next-payment-icon {
+  margin-top: 22px;
+}
+.payment-icon-and-text-wrapper-no-payment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 205px;
+  justify-content: space-between;
+}
+
+.payment-text-wrapper-no-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 82px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.next-scheduled-payment-text-style {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.045em;
+  color: #653494;
+}
+.next-scheduled-bank-text-style {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  letter-spacing: 0.045em;
+  color: #4e5d78;
+  margin-top: -10px;
+}
+.next-scheduled-date-style {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+  color: #4e5d78;
+  margin-top: -5px;
+}
+.button-and-explanation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.exclamation-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+}
+.recent-payroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0px;
+  width: 360px;
+  // width: 306px;
+  height: 263px;
+  border-right: 1px solid #e4e4e4;
+}
+.recent-payroll-funded-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: left;
+  letter-spacing: 0.01em;
+  color: #323b4b;
+}
+.recent-payroll-item {
+  display: flex;
+  flex-direction: row;
+  width: 306px; //85%
+  height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e4e4;
+}
+.loan-id-and-icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 65px;
+  justify-content: space-between;
+}
+.loan-id-style {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+}
+.balance-wrapper-recent-payroll-item {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  min-width: 85px;
+  justify-content: space-between;
+}
+.balance-text-style {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #000000;
+  opacity: 0.4;
+}
+.balance-number-style {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #ff9a3d;
+}
+.outstanding-balance-wrapper-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 306px; //85%
+  height: 64px;
+  margin-top: 20px;
+}
+.outstanding-balance-text-style {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.045em;
+  color: #4e5d78;
+}
+
+.outstanding-balance-number-style {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #ff9a3d;
+  margin-top: 1px;
+}
+.grey-arrow-icon-dashboard :hover {
+  cursor: pointer;
+}
+.no-announcements-style {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.035em;
+  color: #ffffff;
+}
+.arrow-wrapper:hover {
+  cursor: pointer;
+}
+.pending-balance-main-wrapper-ledger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  margin-top: -25px;
+}
+.pending-balance-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(231, 228, 228);
+  color: #4e5d78;
+  font-size: 13px;
+  letter-spacing: 0.035em;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  margin-top: -21px;
+  margin-left: 5px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip .tooltiptext::after {
+  content: ' ';
+  position: absolute;
+  top: 40%;
+  right: 100%; /* To the left of the tooltip */
+
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgb(231, 228, 228) transparent transparent;
+}
+.pending-info-icon {
+  margin-left: 4px;
+  cursor: pointer;
+}
+.arrow-info-icon {
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  #dashboard-main-container {
+    padding: 0px;
+  }
+  #dashboard-home-container {
+    width: 100%;
+    height: 2700px;
+    background: #f3f3f3;
+    padding: 11px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+  .detail-container-dashboard {
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .detail-container-dashboard-bank {
+    width: 335px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-highlight-container-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .dashboard-container-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recent-payroll-funded-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .announcements-container {
+    width: 335px;
+    height: 370px;
+    left: 30px;
+    filter: drop-shadow(0px 30px 40px rgba(32, 21, 56, 0.12));
+    background-color: (32, 21, 56, 0.12);
+    top: 2200px;
+    max-width: 100%;
+  }
+
+  .fund-payroll-container {
+    width: 335px;
+    height: 234px;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 104px;
+    border: 1px solid #ad9bcb;
+    padding: 15px 10px;
+  }
+
+  .announcements-arrow-wrapper {
+    width: 100%;
+    margin-top: 0px;
+  }
+  #half-circle-thick {
+    top: 11%;
+    left: 75%;
+  }
+  #half-circle-one {
+    left: 80%;
+  }
+  #half-circle-two {
+    left: 82%;
+  }
+  #half-circle-three {
+    left: 82%;
+  }
+  .fund-payroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: -195px;
+  }
+  .recent-payroll-funded-main-wrapper {
+    // background-color: green;
+    width: fit-content;
+    padding: 5px;
+
+    justify-content: space-between;
+  }
+  .recent-payroll-funded-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: fit-content;
+    padding: 0px;
+    margin-left: 18px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recent-payroll-wrapper {
+    border: none;
+    // background-color: blue;
+    padding: 15px 25px;
+    max-width: 100%;
+    width: 281px;
+  }
+  .recent-payroll-item {
+    width: 241px;
+  }
+  .recent-payroll-funded-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    // background-color: red;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recent-payroll-next-scheduled-main-wrapper {
+    // background-color: yellow;
+
+    margin-top: 80px;
+    margin-left: auto;
+  }
+  .request-button-wrapper {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .helpful-tools-container {
+    width: 331px;
+    left: 31px;
+    top: 1570px;
+  }
+  .text-and-icon-wrapper {
+    width: 90%;
+  }
+  .outstanding-balance-wrapper-dashboard {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 130px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .user-first-name {
+    font-size: 26px;
+  }
+  .dashboard-header-title {
+    color: #323b4b;
+  }
+  .dashboard-header-value {
+    color: #4e5d78;
+  }
+  .bank-balance {
+    color: #4e5d78;
+  }
+  .payro-announcements-title {
+    font-size: 18px;
+  }
+  .outstanding-wrapper {
+    margin-top: -35px;
+  }
+  .payro-announcements-header-wrapper {
+    justify-content: space-evenly;
+  }
+}

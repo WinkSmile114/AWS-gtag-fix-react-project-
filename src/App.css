@@ -1,0 +1,283 @@
+.App {
+  background-color: #f5f5f5;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ledger-detail {
+  background-color: #fafbfc;
+  margin: auto;
+  padding-bottom: 0%;
+}
+html {
+  background-color: #f5f5f5;
+  max-width: 100%;
+}
+body {
+  max-width: 100%;
+}
+.edit-icon-phone {
+  cursor: pointer;
+  width: 10px !important;
+  margin-left: 5px;
+}
+/* #sign-in-page {
+  width: 100%;
+  height: 700px;
+  background: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./auth/SignInForm/background.svg);
+
+} */
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    background-color: white;
+  }
+
+  html {
+    background-color: white;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.main-body {
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 30px 40px 40px;
+  box-shadow: 0px 35px 60px rgba(21, 21, 56, 0.03);
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.underwriting-review-wrapper {
+  width: 800px;
+  max-width: 100%;
+  margin: auto;
+  padding: 30px 40px 40px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-body {
+    background-color: white;
+    padding: 5px 20px 20px;
+  }
+
+  #application-pages-container.main-body {
+    padding-top: 1px;
+  }
+
+  html {
+    background-color: white;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.alert-container {
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.actual-alerts {
+  margin-left: auto;
+  margin-right: autp;
+}
+
+.purple-text {
+  color: #4e5d78;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accent-background-color {
+  background-color: #653494;
+}
+
+.warning-color {
+  color: #a34e00;
+}
+
+.purple-background-color {
+  background-color: #f4f2fa;
+}
+
+.rounded-corner-section {
+  padding: 5px 5px;
+  border: 1px solid #e0ddf3;
+  border-radius: 10px;
+}
+.rounded-corner-section-light {
+  padding: 9px 20px;
+  border: 1px solid #fafbfc;
+  border-radius: 10px;
+}
+
+.grey-background {
+  background-color: #fafbfc;
+}
+
+body {
+  font-family: "causten-regular";
+}
+
+.form-field {
+  margin-top: 20px;
+}
+.bold {
+  font-weight: bold;
+  font-family: "causten-bold";
+}
+
+@font-face {
+  font-family: "airbnb-cereal-black";
+  src: url("./airbnb-cereal-app/AirbnbCerealBlack.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "airbnb-cereal-bold";
+  src: url("./airbnb-cereal-app/AirbnbCerealBlack.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "airbnb-cereal-book";
+  src: url("./airbnb-cereal-app/AirbnbCerealBook.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "airbnb-cereal-extra-bold";
+  src: url("./airbnb-cereal-app/AirbnbCerealExtraBold.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "airbnb-cereal-light";
+  src: url("./airbnb-cereal-app/AirbnbCerealLight.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "airbnb-cereal-medium";
+  src: url("./airbnb-cereal-app/AirbnbCerealMedium.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "indie-flower";
+  src: url("./IndieFlower-Regular.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "causten-regular";
+  src: url("./causten/causten-regular.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "Causten";
+  src: url("./causten/causten-regular.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "causten";
+  src: url("./causten/causten-regular.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "causten-bold";
+  src: url("./causten/causten-bold.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "causten-extra-bold";
+  src: url("./causten/causten-extra-bold.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "causten-light";
+  src: url("./causten/causten-light.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "causten-medium";
+  src: url("./causten/causten-medium.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: "causten-semi-bold";
+  src: url("./causten/causten-semi-bold.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+.fade-in {
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

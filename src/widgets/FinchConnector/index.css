@@ -1,0 +1,84 @@
+.finch-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 20px;
+  /* Primary / Purple - 50 */
+  border: 1px solid #e0ddf3;
+  box-sizing: border-box;
+  border-radius: 10px;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.finch-logo {
+  margin: 0px 10px;
+}
+
+.finch-api-words {
+  margin: 0px 10px;
+  font-size: 12px;
+}
+
+.finch-right-arrow {
+  width: 14px;
+  height: 10px;
+  margin-right: 14px;
+}
+
+.finch-check-circle {
+  margin-right: 5px;
+}
+
+.finch-connected-words {
+  font-family: 'airbnb-cereal-book';
+}
+
+.disconnect {
+  color: #ff2b2b;
+  font-family: 'airbnb-cereal-book';
+  font-size: 11px;
+  margin-left: auto;
+}
+
+.finch-connect-text {
+  font-size: 16.5px;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  color: #323b4b;
+}
+
+.finch-subtitle {
+  font-size: 12.5px;
+  color: #8a94a6;
+  letter-spacing: 0.045em;
+  margin-top: -11px;
+}
+.disconnect {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .finch-check-circle {
+    margin-right: 2px;
+  }
+
+  .finch-connected-words {
+    font-family: 'airbnb-cereal-book';
+    font-size: 11px;
+    margin-right: 5px;
+  }
+
+  .finch-api-words {
+    margin: 0px 5px;
+    font-size: 12px;
+  }
+}

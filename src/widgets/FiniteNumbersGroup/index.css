@@ -1,0 +1,99 @@
+.verification-code-wrapper {
+  position: relative;
+}
+.input-and-display-wrapper {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+.finite-input-wrapper {
+  width: 40px;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+.input {
+  position: absolute;
+  top: 16px;
+  max-width: 17%;
+  border: none;
+  font-size: 12px;
+  background-color: transparent;
+  outline: none;
+  text-align: center;
+}
+
+.display {
+  border: 1px solid darkgrey;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+}
+
+.left-0 {
+  left: 0px;
+}
+.left-1 {
+  left: 50px;
+}
+.left-2 {
+  left: 100px;
+}
+.left-3 {
+  left: 150px;
+}
+.left-4 {
+  left: 200px;
+}
+.left-5 {
+  left: 250px;
+}
+
+/* .single-val-inputs-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.single-val-inputs-group.social-security-group {
+    justify-content: flex-start;
+}
+
+.single-val-inputs-group .input-container .payro-input {
+    padding: 2px;
+    text-align: center;
+}
+
+.single-val-inputs-group .input-wrapper {
+    border: 1px solid darkgrey;
+}
+
+.single-val-inputs-group input {
+    width: 64px;
+    height: 63px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ss-divider {
+    align-self: center;
+    align-self: center;
+    font-size: 30px;
+    margin: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+    .ss-divider {
+        display: none;
+    }
+} */

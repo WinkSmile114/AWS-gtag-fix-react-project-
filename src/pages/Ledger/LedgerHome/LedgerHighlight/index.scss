@@ -1,0 +1,267 @@
+@import '../../../../common-styles.scss';
+
+#dashboard-highlight-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  // justify-content: space-between;
+  width: 1160px;
+  height: 180px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 25px;
+  padding-left: 19px;
+  padding-bottom: 20px;
+  padding-right: 19px;
+}
+
+.dashboard-progress-bar {
+  background-color: #653494;
+  display: block;
+  height: 1px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: -315px;
+  width: 200px;
+}
+.next-scheduled-payment-wrapper {
+  border-left: 1px solid rgba(173, 155, 203, 0.25);
+  padding: 10px 10px;
+  padding-left: 12px;
+  padding-right: 25px;
+  margin-left: 12px;
+  margin-right: 12px;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 25px;
+  justify-content: space-evenly;
+}
+.connected-bank-name {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.045em;
+  color: #4e5d78;
+  // margin-bottom: -25px;
+}
+
+.bank-balance-title {
+  margin-left: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  color: #4e5d78;
+}
+.title {
+  // margin-left: 28px !important;
+  margin-top: 5px !important;
+  margin-bottom: -10px !important ;
+}
+.title-ledger-detail {
+  color: #653494;
+  margin-bottom: -10px;
+}
+
+.image {
+  margin-left: -10px;
+  margin-top: 40px;
+  // margin-top: 35px !important;
+}
+.dash {
+  font-size: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.next-payment-details-none {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+  color: #4e5d78;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 0px;
+}
+.next-payment-details {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+  color: #4e5d78;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: 1px;
+}
+.ledger-home {
+  margin-bottom: -1px;
+  align-items: center;
+}
+#outstanding-balance-number {
+  color: #653494;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 0px;
+  font-family: 'causten-extra-bold';
+  letter-spacing: 0.015em;
+}
+#outstanding-balance-number-complete {
+  color: #4c2d6a;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 0px;
+  font-family: 'causten-extra-bold';
+  letter-spacing: 0.025em;
+}
+
+#remaining-credit-number {
+  font-family: 'causten-bold';
+
+  color: $accent-success;
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 30px;
+  letter-spacing: 0.025em;
+  margin-top: 15px;
+}
+
+#remaining-credit-number-not-active {
+  font-family: 'causten-regular';
+  margin-left: 200px !important;
+  color: $accent-success;
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 30px;
+  letter-spacing: 0.025em;
+}
+
+#outstanding-balance-title {
+  color: $typography-text-3;
+  font-size: 14px;
+  line-height: 0px;
+}
+#remaining-credit-title {
+  color: $typography-text-3;
+  font-size: 14px;
+  line-height: 0px;
+  // margin-left: 115px !important;
+}
+#remaining-credit-title-not-active {
+  color: $typography-text-3;
+  font-size: 14px;
+  line-height: 0px;
+}
+#original-limit {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  color: #4e5d78;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+#original-limit-not-active {
+  margin-top: -9px;
+  font-size: 12px;
+  color: $typography-text-3;
+  line-height: 0px;
+  margin-left: 200px !important;
+}
+.dashboard-balance-available-credit {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 10px;
+}
+.balance-container {
+  width: 50%;
+  height: 60px;
+}
+.balance-progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.available-credit-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 50%;
+}
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 600px) {
+  #dashboard-highlight-container {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 0px;
+  }
+  .next-scheduled-payment-wrapper {
+    border-left: none;
+    width: 100%;
+  }
+  #dashboard-highlight-container-active {
+    box-shadow: none;
+  }
+
+  #outstanding-balance-number {
+    font-size: 26px;
+    line-height: 125%;
+  }
+  #remaining-credit-number {
+    font-size: 21px;
+    line-height: 125%;
+  }
+
+  #remaining-credit-title {
+    line-height: 20px;
+  }
+
+  #outstanding-balance-title {
+    line-height: 20px;
+  }
+  #original-limit {
+    justify-content: center;
+  }
+  .payment-wrapper {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 0;
+    border-right: 0;
+    width: 100%;
+  }
+}

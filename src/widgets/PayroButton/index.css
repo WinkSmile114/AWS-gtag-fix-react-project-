@@ -1,0 +1,220 @@
+.accent-button {
+  background-color: #653494;
+  color: white;
+  margin: 7px;
+  border-radius: 60px;
+  border: 0px;
+  text-transform: none;
+  padding: 11px 28px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'causten-bold';
+  font-size: 14px;
+  min-width: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  letter-spacing: 0.015em;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accent-button.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.accent-button.get-funded-button-repeat-funding {
+  margin-left: 8px;
+}
+
+.accent-button.small {
+  width: 124px;
+  padding: 12px 12px;
+  font-size: 12px;
+}
+.accent-button.medium {
+  width: 150px;
+  padding: 12px 12px;
+  font-size: 12px;
+}
+
+.accent-button.large {
+  width: 400px;
+  font-size: 14px;
+  height: 47px;
+}
+.get-funded-button-repeat-funding {
+  margin-left: -25px;
+}
+.save-changes {
+  margin-left: px;
+  width: 100% !important;
+  height: 48px !important;
+  font-size: 14px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .accent-button.large {
+    width: 230px;
+    font-size: 14px;
+    height: 51px;
+  }
+  .get-funded-button-repeat-funding {
+    margin-left: 65px !important;
+  }
+}
+.accent-button.small .button-start-image {
+  width: 12px;
+  height: 12px;
+}
+
+.accent-button.purple-variant {
+  background-color: #653494;
+}
+.accent-button.green-agree-variant {
+  background-color: #00834f;
+}
+.accent-button.dark-purple-variant {
+  background-color: #1a1244;
+}
+
+.accent-button.green-variant {
+  background-color: #21b17d;
+}
+.accent-button.red-white-variant {
+  background-color: white;
+  /* border: 1px solid #DCDFE3; */
+  color: #ff2b2b;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  justify-content: space-evenly;
+  line-height: 17px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.025em;
+  margin-right: -40px;
+}
+.accent-button.purple-white-variant {
+  background-color: transparent;
+  color: #5749aa;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.035em;
+  width: 215px;
+}
+
+.accent-button.white-variant {
+  background-color: white;
+  border: 1px solid #dcdfe3;
+  color: #653494;
+  font-weight: bold;
+}
+.accent-button.black-variant {
+  background-color: black;
+  border: 1px solid #dcdfe3;
+  color: white;
+}
+
+.accent-button.disabled.green-variant {
+  background-color: #ffff;
+  color: #00834f;
+  width: 250px;
+}
+.accent-button.disabled {
+  background-color: #adb4bd;
+}
+
+.accent-button.back-button-variant {
+  width: 110px;
+  background-color: white;
+  color: #653494;
+  border: none;
+}
+.accent-button.green-dashboard-variant {
+  background-color: white;
+  color: #21b17d;
+  border: none;
+  font-size: 15px;
+}
+.accent-button.back-button-variant .button-start-image {
+  margin-right: 0px;
+}
+
+.button-end-image {
+  margin-left: 10px;
+}
+#footer-button-wrapper .back-button-variant {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.width-130 {
+  width: 130px;
+}
+.accent-button.medium.width-130 {
+  width: 110px;
+  padding: 12px 12px;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .accent-button.medium.width-130 {
+    width: 116px;
+    padding: 12px 12px;
+    font-size: 12px;
+    margin-left: -80px;
+  }
+}
+
+.width-200 {
+  width: 200px !important;
+  flex: none;
+}
+.width-210 {
+  width: 210px;
+}
+.width-250 {
+  width: 250px !important;
+  font-size: 15px !important;
+}
+.width-182 {
+  width: 182px !important;
+  height: 48px;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  line-height: 17px;
+  font-family: 'causten-regular';
+}
+.width-259 {
+  width: 259.77px !important;
+  font-family: 'causten-regular';
+  letter-spacing: 0.15em;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  align-items: center;
+  text-align: center;
+  line-height: 18px;
+  height: 66px;
+  border-radius: 76.1538px !important;
+  padding: 15.2308px 38.0769px !important;
+}
+.width-small {
+  padding: 1px 1px !important;
+  width: 1px !important;
+  min-width: 0px !important;
+  justify-content: end;
+}
+@media only screen and (max-width: 800px) {
+  .width-259 {
+    height: 45.69px;
+    font-size: 12px !important;
+    width: 205px !important;
+    padding: 10.1538px 25.3846px !important;
+  }
+}

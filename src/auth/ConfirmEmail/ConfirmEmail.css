@@ -1,0 +1,46 @@
+#confirm-email-wrapper {
+  width: 521px;
+  max-width: 100%;
+  margin-bottom: 42px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.confirm-email-input {
+  width: 150px;
+  padding: 12px 20px;
+  margin: 8px 8px 10px 10px;
+  box-sizing: border-box;
+}
+
+.confirm-email-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.resend-email-section {
+  display: flex;
+  flex-direction: row;
+  width: 150%;
+  align-items: center;
+  padding: 12px 30px;
+  margin-left: 25px;
+}
+
+.resend-email-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 30px;
+  margin-left: -50%;
+}
+.resend-email {
+  margin-left: -50%;
+}
+.change-email {
+  margin-right: -50%;
+}

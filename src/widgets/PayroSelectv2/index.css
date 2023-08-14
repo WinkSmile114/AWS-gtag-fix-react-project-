@@ -1,0 +1,127 @@
+.payro-select-wrapper {
+  font-size: 14px;
+  color: #323b4b;
+  font-family: 'airbnb-cereal-light';
+}
+
+.payro-select-wrapper.open {
+  position: relative;
+  z-index: 10;
+  opacity: 1;
+}
+.payro-select-wrapper.closed {
+  position: relative;
+  z-index: 1;
+}
+.payro-select-left-side-icon {
+  width: 24.7px;
+  height: 23px;
+  margin-right: 10px;
+}
+#select-content {
+  border: 1px solid #dcdfe3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  padding: 13px 10px 13px 10px;
+}
+
+#select-content-bank {
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  padding: 5px;
+  padding-left: 10px;
+}
+#dashboard {
+  border: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  margin-top: -24px;
+  margin-left: 15px;
+  padding: 2px;
+
+  /* padding: 13px 10px 13px 10px; */
+}
+
+.select-options-wrapper :hover {
+  /* border-top: 1px solid #dcdfe3; */
+  background-color: whitesmoke;
+}
+
+.select-option {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+.select-option-select-content-bank {
+  font-size: 16px;
+  color: #181f2b;
+  letter-spacing: 0.035em;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  cursor: pointer;
+  font-family: 'causten-regular';
+}
+.select-option-select-content-bank-dashboard {
+  cursor: pointer;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+}
+
+.select-label {
+  font-size: 12px;
+  /* font-family: 'causten-bold'; */
+  font-family: 'airbnb-cereal-medium';
+  color: #323b4b;
+  font-weight: bold;
+}
+
+.closed-one {
+  display: flex;
+
+  cursor: pointer;
+  font-weight: bold !important;
+  justify-content: space-between;
+}
+
+.closed-one-select-content-bank {
+  font-family: 'causten-regular';
+  font-size: 16px;
+  font-weight: 400;
+  color: #323b4b;
+  letter-spacing: 0.035em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.closed-one-select-content-bank-dashboard {
+  cursor: pointer;
+  font-family: 'airbnb-cereal-medium';
+  font-size: 12px;
+  color: #323b4b;
+  letter-spacing: 0.035em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.closed-one-select-content-bank-integrations {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  color: #4c2d6a;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}

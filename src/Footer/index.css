@@ -1,0 +1,117 @@
+.footer-container {
+  border-radius: 0px;
+  background-color: #2f353b;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 335px;
+  padding: 40px;
+}
+
+.actual-logo {
+  max-width: 113px;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  width: 90%;
+  max-width: 100%;
+}
+@media only screen and (max-width: 1000px) {
+  .footer-text {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.actual-text {
+  /* font-family: 'airbnb-cereal-light'; */
+  font-family: "causten";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 155%;
+  letter-spacing: 0.045em;
+  color: #fafafa;
+}
+
+.bold-container {
+}
+
+.bold-text {
+  color: #8a94a6;
+  /* font-family: 'airbnb-cereal-medium'; */
+  font-family: "causten";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 125%;
+  letter-spacing: 0.015em;
+  margin-top: 0px;
+}
+
+.purple-background-container {
+  background: radial-gradient(87.68% 87.68% at 95.36% 14.36%, #653494 0%, #f3acff 55.86%);
+  mix-blend-mode: normal;
+  opacity: 20%;
+  filter: blur(150px);
+}
+
+@media only screen and (max-width: 1450px) {
+  .purple-background-container {
+    margin-left: 300px !important;
+    max-width: 100% !important;
+    filter: blur(100px) !important;
+  }
+}
+#legal-policy-links {
+  display: flex;
+  flex-direction: column;
+  font-family: "causten";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 155%;
+  letter-spacing: 0.045em;
+  color: #fafafa;
+  margin-bottom: 20px;
+}
+#legal-policy-links p {
+  font-size: 16px;
+  color: #e1c2f3;
+  font-weight: bold;
+  text-decoration: none;
+}
+#legal-policy-links a {
+  font-size: 14px;
+  color: #fafafa;
+  text-decoration: none;
+}
+#legal-policy-links a:hover {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e73b91;
+
+  text-decoration: none;
+}
+
+#footer-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #footer-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#report-an-issue {
+  background-color: white;
+  width: 500px;
+  max-width: 100%;
+  padding: 5px;
+  border: 1px solid rgb(223, 36, 36);
+  border-radius: 6px;
+  color: rgb(126, 22, 22);
+}

@@ -1,0 +1,199 @@
+@import '../../../common-styles.scss';
+
+.payroll-record {
+  display: flex;
+  margin-top: 7px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payroll-record-label {
+  text-align: left;
+  font-size: 11px;
+  margin-top: 17px;
+}
+
+.we-prestandard {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.date-and-cash {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.finance-numbers {
+  margin-top: 5px;
+}
+
+// .funding-amount {
+//   grid-column-start: 1;
+//   grid-column-end: 2;
+//   padding-right: 20px;
+// }
+
+.line-of-credit {
+  color: #8a94a6;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-left: 21px;
+}
+
+#line-of-credit-label {
+  font-size: 12px;
+  line-height: 155%;
+  margin-bottom: -12px;
+}
+
+#line-of-credit-number {
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'airbnb-cereal-medium';
+}
+
+.line-of-credit-bubble {
+  margin-top: 30px;
+}
+
+.amount-you-want-to-finance-label {
+  color: #2f353b;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+  font-family: 'airbnb-cereal-medium';
+  margin-bottom: -6px;
+  margin-top: 40px;
+}
+
+.funding-amount-item {
+  margin-right: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .funding-amount-section {
+    width: 200px;
+    max-width: 200px;
+  }
+}
+.more-funding.funding-amount-section {
+  width: 255px;
+  max-width: 255px;
+}
+
+.funding-amount-section.more-funding
+  .funding-amount-item.actual-amount {
+}
+@media only screen and (max-width: 600px) {
+  .funding-amount-section.more-funding {
+    width: 200px;
+    max-width: 200px;
+  }
+  .funding-amount-item.actual-amount {
+  }
+}
+
+.funding-amount-item.available-credit {
+  border-left: 1px solid #d7cfcf;
+  padding-left: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .funding-amount-item.available-credit {
+    border-left: none;
+  }
+}
+
+.funding-amount-item.available-credit.more-funding-second-column {
+  align-self: flex-start;
+  margin-top: 20px;
+  border-left: none;
+  padding-left: 15px;
+}
+.more-funding .funding-amount-item.available-credit {
+}
+
+.funding-amount-input {
+  width: 255px;
+}
+
+.input-container.funding-amount-input {
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .funding-amount-input {
+    width: 200px;
+  }
+}
+
+#available-credit-label {
+  color: $typography-text-4;
+  letter-spacing: 0.045em;
+  font-size: 12px;
+  line-height: 155%;
+}
+
+#available-credit-amount {
+  color: $typography-text-4;
+  letter-spacing: 0.015em;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.payroll-to-fund-step {
+  color: $typography-text-1;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+  font-family: 'airbnb-cereal-medium';
+}
+
+#amount-you-want-to-finance-label {
+  margin-bottom: 0px;
+}
+
+.onboarding #finch-connected-select-amount {
+  margin-top: 23px;
+  margin-right: 20px;
+}
+
+.more-funding #finch-connected-select-amount {
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: #2f353b;
+  }
+}
+
+#actual-payroll-amount {
+  letter-spacing: 0.015em;
+  color: #574b89;
+  font-size: 26px;
+  line-height: 34px;
+  font-family: 'airbnb-cereal-medium';
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+#step-2-wrapper {
+  display: flex;
+  align-items: center;
+}

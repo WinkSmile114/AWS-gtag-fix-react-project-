@@ -1,0 +1,15 @@
+#city-state-zip {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 500px) {
+  #city-state-zip {
+    flex-direction: column;
+  }
+}
+
+#company-state-wrapper {
+  margin-left: 5px;
+  margin-right: 5px;
+}

@@ -1,0 +1,57 @@
+customHeaders:
+  - pattern: '**/*'
+    headers:
+      - key: 'Strict-Transport-Security'
+        value: 'max-age=31536000; includeSubDomains'
+      - key: 'X-Frame-Options'
+        value: 'SAMEORIGIN'
+      - key: 'X-XSS-Protection'
+        value: '1; mode=block'
+      - key: 'X-Content-Type-Options'
+        value: 'nosniff'
+      - key: 'Content-Security-Policy'
+        value: >-
+          default-src 'self' https://prod-carpintero-branding.s3.us-west-2.amazonaws.com https://payro-user-files-prod.s3.us-east-1.amazonaws.com *.fullstory.com https://payro-user-files-dev.s3.us-east-1.amazonaws.com https://cognito-idp.us-east-1.amazonaws.com *.calendly.com *.chilipiper.com https://js.intercomcdn.com *.intercom.io https://api.payrofinance.com https://payrofinance.com https://media.payrofinance.com https://portal.payrofinance.com https://dev.d1u215aukayv17.amplifyapp.com  https://connect.tryfinch.com https://connect2.finicity.com *.payrofinance.net
+          https://api.intercom.io
+          https://api-iam.intercom.io
+          https://api-ping.intercom.io
+          https://nexus-websocket-a.intercom.io
+          https://nexus-websocket-b.intercom.io
+          wss://nexus-websocket-a.intercom.io
+          wss://nexus-websocket-b.intercom.io
+          https://uploads.intercomcdn.com
+          https://uploads.intercomusercontent.com
+          https://intercom-sheets.com
+          https://www.intercom-reporting.com 
+          https://www.youtube.com
+          https://player.vimeo.com
+          https://fast.wistia.net
+          https://js.intercomcdn.com
+          http://fonts.intercomcdn.com
+          https://intercom.help
+          https://api-iam.intercom.io
+          https://js.intercomcdn.com
+          blob:
+          data:
+          https://js.intercomcdn.com
+          https://static.intercomassets.com
+          https://downloads.intercomcdn.com
+          https://uploads.intercomusercontent.com
+          https://gifs.intercomcdn.com 
+          https://video-messages.intercomcdn.com
+          https://messenger-apps.intercom.io
+          https://*.intercom-attachments-1.com
+          https://*.intercom-attachments-2.com
+          https://*.intercom-attachments-3.com
+          https://*.intercom-attachments-4.com
+          https://*.intercom-attachments-5.com
+          https://*.intercom-attachments-6.com
+          https://*.intercom-attachments-7.com
+          https://*.intercom-attachments-8.com
+          https://*.intercom-attachments-9.com
+          https://cdn.plaid.com
+          https://app.intercom.io
+          https://widget.intercom.io
+          https://js.intercomcdn.com;
+          style-src 'self' 'unsafe-inline';
+          script-src 'self' *; report-uri https://api-dev.payrofinance.net/auth/csp-reports;

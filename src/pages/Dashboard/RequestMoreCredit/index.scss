@@ -1,0 +1,48 @@
+.funding-amount-and-avail-credit-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: -30px;
+}
+.request-more-credit-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px 25px;
+  margin-top: 50px;
+  width: 476px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+// #unable-to-request-credit-text-container {
+//   background-color: red;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   align-content: center;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+.unable-to-request-credit-text-title {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 15px;
+  letter-spacing: 0.015em;
+  color: #4e5d78;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.verify-last-payroll-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.015em;
+  color: #2f353b;
+  padding-left: 8px;
+}

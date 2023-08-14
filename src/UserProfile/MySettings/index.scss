@@ -1,0 +1,241 @@
+.settings-main-wrapper {
+  background: RGB(255, 255, 255);
+}
+
+.settings-main-container {
+  position: relative;
+  width: 100%;
+  height: 1213px;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 100px;
+  // background-color: #fafbfc;
+  background: RGB(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.settings-home-container {
+  // background-color: yellow;
+
+  height: 1213px;
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+.settings-options-home-container {
+  //background-color: red;
+  width: 1160px;
+  height: 100%;
+  max-width: 100%;
+}
+
+.setting-option-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+  color: #4c2d6a;
+}
+.settings-side-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0px;
+  width: 282px;
+  height: 356px;
+  background: #ffffff;
+  border: 1px solid #dcdfe3;
+  box-shadow: 0px 35px 60px rgba(21, 21, 56, 0.03);
+  border-radius: 20px;
+}
+#side-bar-menu-option {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 56px;
+}
+#side-bar-menu-option-home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+  height: 104px;
+  // background-color: teal;
+}
+.icon-and-label-wrapper {
+  //background-color: firebrick;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  width: 90%;
+}
+.label-sublabel-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#options-icon {
+  margin-right: 20px;
+}
+.options-icon-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 20px;
+
+  width: 50px;
+  height: 50px;
+  background: #f4f2fa;
+  border-radius: 100px;
+}
+.options-icon-style:hover {
+  background-color: #ffffff;
+}
+.settings-label-style {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.3px;
+  color: #4c2d6a;
+}
+.settings-sublabel-style {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #8a94a6;
+}
+.settings-individual-option-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 30px 20px 20px;
+  width: 80%;
+  height: 93px;
+  background: #ffffff;
+  border: 1px solid #f4f4f4;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.disabled {
+  background: #f4f4f4;
+  opacity: 0.5;
+}
+
+.settings-individual-option-wrapper:hover {
+  cursor: pointer;
+  background: #f4f2fa;
+}
+#side-bar-menu-option :hover {
+  cursor: pointer;
+  color: #323b4b;
+}
+.side-bar-selected-border {
+  display: flex;
+  flex-direction: row;
+  width: 4px;
+  height: 49px;
+  background-color: #653494;
+  border-radius: 0px 5px 5px 0px;
+}
+.side-bar-not-selected-border {
+  display: flex;
+  flex-direction: row;
+  width: 4px;
+  height: 49px;
+  background-color: none;
+  border-radius: 0px 5px 5px 0px;
+}
+// .profile-option-icon-wrapper {
+//   margin-left: 25px;
+// }
+.settings-title-wrapper {
+  width: 580px;
+  height: 45px;
+  border-bottom: 1.5px solid #dcdfe3;
+  align-items: top;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+.settings-title-style {
+  font-family: 'Causten';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+  color: #4c2d6a;
+  margin-top: -0.5px;
+}
+// .side-bar-selected-text {
+//   font-family: 'Causten';
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 155%;
+//   letter-spacing: 0.035em;
+//   color: #653494;
+//   color: #ffffff;
+// }
+.side-bar-selected-text {
+  font-family: 'Causten';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  color: #653494;
+}
+
+.side-bar-not-selected-text {
+  font-family: 'Causten';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  color: #8a94a6;
+}
+.settings-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.025em;
+  color: #4c2d6a;
+}
+@media screen and (max-width: 600px) {
+  .settings-main-container {
+    background-color: red;
+    width: 420px;
+    padding: 0px;
+    display: contents;
+  }
+  .settings-individual-option-wrapper {
+    width: 100%;
+  }
+  .settings-side-bar-container {
+    display: none;
+  }
+}

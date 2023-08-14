@@ -1,0 +1,80 @@
+.slider-component-wrapper {
+  width: 100%;
+  margin: 5px;
+}
+
+.slider-container.error {
+  border: 1px solid red;
+  border-radius: 8px;
+  padding: 3px;
+  margin-bottom: 3px;
+}
+
+.required:after {
+  content: ' *';
+  color: red;
+}
+
+.slider-error-message {
+  font-size: 11px;
+}
+
+.slider-container {
+  width: 100%;
+  /* Width of the outside container */
+}
+
+.slider-input-label {
+  font-size: 12px;
+  font-family: 'airbnb-cereal-medium';
+}
+
+.slider-input-label-subtext {
+  color: #323b4b;
+  font-size: 12px;
+}
+
+.slider-value-display {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* The slider itself */
+
+.slider {
+  margin-left: 0px;
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 95%;
+  /* Full-width */
+  height: 6px;
+  /* Specified height */
+  background: #f5f7fa;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  -webkit-transition: 0.2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 7px;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background: url('./elipse.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background: url('./elipse.png');
+  cursor: pointer;
+}

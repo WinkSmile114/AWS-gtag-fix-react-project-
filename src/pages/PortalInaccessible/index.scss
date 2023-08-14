@@ -1,0 +1,41 @@
+@import '../../common-styles.scss';
+#portal-inaccessible-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 590px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+#portal-inaccessible-message {
+  background-color: $primary-purple-background;
+  color: $primary-purple-700;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.025em;
+  border-radius: 7px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'causten-medium';
+  margin-top: 13px;
+  margin-bottom: 42px;
+}
+#portal-inaccessible-explanation {
+  color: $typography-text-3;
+  text-align: center;
+  font-size: 18px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'causten-regular';
+}

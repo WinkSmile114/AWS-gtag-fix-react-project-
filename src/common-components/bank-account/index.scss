@@ -1,0 +1,63 @@
+.bank-info-input-wrapper {
+  width: 50%;
+}
+
+.bank-info-input-wrapper.right-side {
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.bank-info-input-wrapper.left-side {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .bank-info-input-wrapper {
+    width: 100%;
+    cursor: pointer;
+  }
+  .bank-info-input-wrapper.right-side {
+    margin-left: 0px;
+  }
+  .bank-info-input-wrapper.left-side {
+    margin-right: 0px;
+  }
+}
+.bank-info-input-wrapper.full-width {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  cursor: pointer;
+}
+
+#account-number-section {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  // align-items: flex-end;
+}
+
+#routing-number-section {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  // align-items: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+  #routing-number-section {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #account-number-section {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,97 @@
+#sign-in-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 1200px) {
+  .sign-in-background-image {
+    display: none;
+  }
+
+  #sign-in-page {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 1250px) and (max-width: 1399px) {
+  #sign-in-background-image-two {
+    left: 64.6%;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1650px) {
+  #sign-in-background-image-one {
+    left: 11%;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1650px) {
+  #sign-in-background-image-two {
+    left: 63.6%;
+  }
+}
+@media only screen and (min-width: 1651px) and (max-width: 1750px) {
+  #sign-in-background-image-one {
+    left: 13%;
+  }
+}
+
+@media only screen and (min-width: 1651px) and (max-width: 1800px) {
+  #sign-in-background-image-two {
+    left: 63.6%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #sign-in-background-image-one {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  #sign-in-background-image-two {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #sign-in-background-image-one {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #sign-in-background-image-two {
+    display: none;
+  }
+}
+#login-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.forgot-password-text {
+  text-align: center;
+}
+
+.login-subtexts {
+  font-size: 15px;
+  margin-top: 21px;
+  cursor: pointer;
+}
+
+#login-page-wrapper {
+  width: 492px;
+  max-width: 100%;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  #login-page-wrapper {
+    max-width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

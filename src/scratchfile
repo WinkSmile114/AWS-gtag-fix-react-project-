@@ -1,0 +1,3 @@
+need lots of global state - but mainly to prevent rerendering for each stage,
+also since the repeat funding flow combines the components
+if each form uses global state

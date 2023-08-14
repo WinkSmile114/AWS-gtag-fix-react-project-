@@ -1,0 +1,1130 @@
+@import '../../../common-styles.scss';
+
+// .page-wrapper{
+//   position: relative;
+// width: 1440px;
+// height: 1850px;
+// height: max-content;
+
+// background: #FAFBFC;
+// }
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+#back-arrow {
+  transform: rotate(-90deg);
+  margin-right: 3px;
+}
+
+#loan-slash {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#repayment-id {
+  color: #4e5d78;
+  margin-left: 22px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+#ledger-detail-highlight-container {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  height: 180px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 45px 44px -36px rgba(21, 21, 56, 0.09);
+  border-radius: 20px;
+  padding-top: 35px !important;
+  padding-left: 90px !important;
+}
+#ledger-detail-highlight-container-active {
+  // display: flex;
+  // flex-direction: row;
+  width: 1160px;
+  height: 318px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+
+  padding-left: 55px;
+  padding-top: 50px;
+  padding-right: 25px;
+  box-shadow: 0px 45px 44px -36px rgba(21, 21, 56, 0.09);
+}
+
+#paid-off-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1px 8px;
+  margin-top: -55px !important;
+  position: absolute;
+  width: 104px;
+  height: 34px;
+
+  border: 1px solid #21b17d;
+  box-sizing: border-box;
+  border-radius: 6px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-left: 825px;
+  margin-bottom: auto;
+  background-color: white;
+  z-index: 3000;
+}
+.paid-off-text {
+  font-family: 'airbnb-cereal-bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #008e5c;
+  margin-left: 5px;
+}
+
+#additional-detail-highlight-container-one {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0px 25px 40px rgba(21, 21, 56, 0.02);
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 20px;
+  height: fit-content;
+}
+#additional-detail-highlight-container-two {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0px 25px 40px rgba(21, 21, 56, 0.02);
+  border-radius: 20px;
+  padding: 20px;
+  height: fit-content;
+}
+#additional-detail-highlight-container-three {
+  width: 330px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0px 25px 40px rgba(21, 21, 56, 0.02);
+  border-radius: 20px;
+  padding: 25px;
+}
+.advancement-date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  padding-left: 5px;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #4e5d78;
+  margin-right: auto;
+}
+
+#additional-details-text-container {
+  width: 156px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px;
+}
+.additional-details-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #4e5d78;
+}
+
+.balance-additional-detail {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+
+  color: #323b4b;
+}
+.balance-icon {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.balance-container-balance-number {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+}
+.ledger-details-subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ledger-details-subtitle-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 10px;
+  letter-spacing: 0.015em;
+  color: #4c2d6a;
+}
+.payment-explanation-style {
+  color: #653494;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+.loan-id-title-style {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 10px;
+  letter-spacing: 0.015em;
+  color: #653494;
+  margin-bottom: -15px;
+}
+
+.scheduled-payments-wrapper {
+  margin-top: 15px;
+  background-color: #fff0d9;
+  width: 359.9px;
+
+  margin-left: -15px !important;
+  padding: 20px;
+}
+.payment-wrapper-unable-to-schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#loan-timeline-circle {
+  background: #f4f2fa;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 2.5px;
+  margin-left: -24px;
+  margin-top: 25px;
+  display: flex;
+  margin-bottom: -35px;
+}
+#images-background-color {
+  background: #7265ad;
+  width: 28px;
+  height: 28px;
+  border-radius: 30%;
+  padding: 2.9px;
+}
+
+.no-payments-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.015em;
+  color: #4e5d78;
+  margin-left: 110px;
+}
+.scheduled-payments-header-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.3px;
+  color: #323b4b;
+  // margin-top: 0px;
+}
+.scheduled-payments-subheader-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.045em;
+  color: #4e5d78;
+}
+.scheduled-payments-data {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  display: flex;
+  color: #323b4b;
+}
+
+.full-remaining-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 155%;
+  letter-spacing: 0.02em;
+  color: #00834f;
+  align-items: center;
+}
+#remit-payment-white-button {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  z-index: 2000;
+}
+.payment-wrapper-ledger-detail {
+  padding: 10px 10px;
+  border-spacing: 0px;
+  box-sizing: border-box;
+
+  width: fit-content;
+  flex-grow: 0;
+  height: 116px;
+  justify-content: space-evenly;
+  align-items: start;
+
+  display: flex;
+  flex-direction: column;
+}
+.image-wrapper {
+  margin-right: 25.5px;
+}
+.title-purple {
+  margin-top: -5px !important;
+  margin-bottom: -20px !important ;
+  color: #653494;
+}
+#close-request-modal {
+  margin-left: 400px;
+}
+.notification-text {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.015em;
+  color: #8a94a6;
+}
+#outstanding-balance-number-modal {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 125%;
+  margin-left: 125px;
+  margin-top: 8px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+  color: #653494;
+}
+#outstanding-balance-ledger-detail-complete {
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 0px;
+  font-family: 'causten-bold';
+  letter-spacing: 0.015em;
+  color: #4c2d6a;
+}
+#outstanding-balance-ledger-detail {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 0px;
+  font-family: 'causten-extra-bold';
+  letter-spacing: 0.015em;
+  color: #ff9a3d;
+}
+.date-wrapper-ledger-detail-complete {
+  font-size: 36px;
+}
+.date-wrapper-ledger-detail {
+  font-size: 36px;
+}
+.balance-wrapper-ledger-detail {
+  margin-left: 50px;
+}
+.breakdown-values-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.balance-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remit-payment-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 3px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 20px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-left: 15px;
+  margin-bottom: auto;
+  width: 608px;
+}
+
+.remit-payment-subtitle {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+
+  flex: none;
+  padding-right: 35px;
+}
+.button-wrapper-remit-payment {
+  margin-left: 25px;
+  padding: 10px;
+}
+.button-wrapper-remit-payment-modal {
+  margin-left: 260px;
+  margin-top: -70px;
+  padding: 10px;
+}
+.button-wrapper-remit-payment-modal-cancel {
+  margin-left: 100px;
+  margin-top: 2px;
+  padding: 10px;
+}
+#remaining-credit-title-ledger-detail {
+  color: $typography-text-3;
+  font-size: 14px;
+}
+#remaining-credit-title-ledger-detail-complete {
+  color: $typography-text-3;
+  font-size: 14px;
+  line-height: 0px;
+  margin-left: 105px;
+}
+#repayment-highight {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 45px 44px -36px rgba(21, 21, 56, 0.09);
+  border-radius: 20px;
+  width: 1000px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.repayment-hightight-title {
+  color: $typography-text-3;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.repayment-hightight-value {
+  font-family: 'airbnb-cereal-medium';
+  color: $primary-purple-800;
+  font-size: 49px;
+  line-height: 125%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#modal-wrapper {
+  margin-top: 19px;
+}
+.modal {
+  //  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+#loan-details-main-container {
+  display: flex;
+  // grid-template-columns: 200px 200px 200px;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  width: 1060px;
+  margin-bottom: 10px;
+}
+#loan-details-main-container-active {
+  display: flex;
+  // grid-template-columns: 200px 200px 200px;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  width: 1160px;
+  margin-bottom: 10px;
+}
+.advance-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-left: 55px;
+  width: 1050px;
+  margin: auto;
+}
+.modal-header {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #653494;
+}
+
+.modal-outstanding-balance-title {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.035em;
+
+  margin-left: 60px;
+  margin-top: 50px;
+  color: #4e5d78;
+}
+
+#modal-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal-titles {
+  font-family: 'airbnb-cereal-medium';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.015em;
+
+  color: #323b4b;
+}
+
+.modal-subtitles {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+  color: #2f353b;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  padding-right: 28px;
+}
+.modal-details {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.modal-details-payment-date {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.advance-design-color {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+
+  margin-left: -52px;
+  color: #653494 !important;
+}
+.back-arrow-image :hover {
+  z-index: 2000;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.loan-id-padding {
+  padding-left: 12px;
+}
+.loan-id-design {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+
+  color: #4e5d78;
+}
+.remaining-wrapper-ledger-detail {
+  width: 250px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px 25px;
+
+  border: 1px solid #888;
+  margin-top: 50px;
+  width: 476px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.payment-explanation-wrapper {
+  color: #653494;
+  background-color: #f4f2fa;
+  display: flex;
+  border-radius: 5px;
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+.payment-explanation-text {
+  align-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.0005em;
+}
+/* The Close Button */
+.close {
+  color: #653494;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #4c2d6a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#payoff-date-complete {
+  color: #4c2d6a;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 0px;
+  font-family: 'causten-extra-bold';
+  letter-spacing: 0.015em;
+}
+.completed-payments-icon-column {
+  margin-left: 76px;
+  margin-top: -35px;
+}
+.bold-numbers-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+}
+.bold-numbers-wrapper-active {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+}
+.payment-and-remit-payment-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+}
+.image-next-scheduled-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  #loan-details-main-container {
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+  #remit-payment-white-button {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    z-index: 2000;
+  }
+  #completed-payments-wrapper-active {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #loan-details-main-container-active {
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+  #additional-details-text-container {
+    display: none !important;
+  }
+  .main-wrapper {
+    display: inline;
+    padding-right: 50px;
+    width: 335px;
+    height: fit-content;
+    padding-left: 5px;
+  }
+  #paid-off-container {
+    display: none;
+  }
+  .bold-numbers-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: baseline;
+  }
+  .bold-numbers-wrapper-active {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: auto;
+    align-items: baseline;
+  }
+  #additional-detail-highlight-container-one {
+    width: 340px;
+    border: 1px solid #8a94a6;
+  }
+  #additional-detail-highlight-container-two {
+    margin-top: 50px;
+    width: 342px;
+    border: 1px solid #8a94a6;
+  }
+  #additional-detail-highlight-container-three {
+    width: 340px;
+    margin-top: 50px;
+    border: 1px solid #8a94a6;
+  }
+  .scheduled-payments-wrapper {
+    margin-top: 15px;
+    background-color: #fff0d9;
+    width: 338px;
+    margin-left: -15px !important;
+    padding: 20px;
+  }
+  .completed-payments-icon-column {
+    margin-left: 68px;
+  }
+
+  .repayment-hightight-value {
+    font-size: 15px;
+    line-height: 125%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .modal-content {
+    width: 335px;
+    margin-left: 15px;
+  }
+  .button-wrapper-remit-payment-modal-cancel {
+    margin-left: -20px;
+    margin-top: 8px;
+    padding: 10px;
+  }
+
+  // .date-wrapper-ledger-detail {
+  //   margin-left: -60px;
+  //   margin-top: -15px;
+  // }
+  // .date-wrapper-ledger-detail-complete {
+  //   margin-left: -65px;
+  //   margin-top: -30px;
+  // }
+  #remaining-credit-title-ledger-detail-complete {
+    margin-left: -85px;
+  }
+
+  #outstanding-balance-ledger-detail-complete {
+    margin-left: -85px;
+  }
+  #completed-payments-wrapper-none {
+    margin-left: 45px;
+  }
+  .no-payments-text {
+    margin-left: 45px;
+  }
+
+  .payment-wrapper-ledger-detail {
+    margin-top: -15px;
+    padding: 10px 5px;
+    margin-left: 15px;
+    width: 355px;
+    //    height: 550px;
+  }
+  .image-wrapper {
+    margin-right: 0px;
+  }
+  .image-next-scheduled-wrapper {
+    margin: auto;
+    margin-left: -25px;
+  }
+  .connected-bank-name {
+    color: #323b4b;
+  }
+  .button-wrapper-remit-payment {
+    margin-left: 0px;
+  }
+  #outstanding-balance-number-modal {
+    margin-left: 80px;
+  }
+
+  #modal-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .modal-details {
+    // margin-left: 10px;
+    font-size: 14px;
+    color: #4c2d6a;
+  }
+  .modal-details-payment-date {
+    // margin-left: 68px;
+    font-size: 14px;
+    color: #4c2d6a;
+  }
+  .balance-wrapper-ledger-detail {
+    margin-top: -15px;
+    margin-left: -112px;
+  }
+  // .outstanding-balance-ledger-detail {
+  //   margin-left: -65px;
+  // }
+
+  .modal-outstanding-balance-title {
+    font-size: 12px;
+  }
+  .notification-text {
+    font-size: 12px;
+  }
+  .button-wrapper-remit-payment-modal {
+    margin-left: 120px;
+  }
+  #ledger-detail-highlight-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    border: 1px solid #8a94a6;
+    width: 340px;
+    max-width: 100%;
+    height: 100%;
+    align-items: end;
+  }
+  #ledger-detail-highlight-container-active {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    border: 1px solid #8a94a6;
+    width: 340px;
+    max-width: 100%;
+    height: 100%;
+    align-items: end;
+  }
+  #additional-details-text-container {
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .remit-payment-wrapper {
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 300px;
+    margin-left: -42px;
+    margin-top: 35px;
+  }
+  #remaining-credit-title-ledger-detail {
+    margin-left: 50px;
+  }
+
+  #outstanding-balance-ledger-detail {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+}
+
+#repayment-sections {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#timeline-icon {
+  margin-right: 15px;
+}
+
+#loan-timeline-header {
+  display: flex;
+  align-items: center;
+}
+
+#loan-timeline {
+  background-color: #ffffff;
+  box-shadow: 0px 25px 40px rgba(21, 21, 56, 0.02);
+  border-radius: 20px;
+  padding: 25px 30px;
+  width: 380px;
+  max-width: 100%;
+  color: $primary-purple-800;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+  font-family: 'airbnb-cereal-medium';
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .payment-and-remit-payment-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 78px;
+  }
+}
+
+.payment-type {
+  color: $typography-text-2;
+  letter-spacing: 0.045em;
+  font-size: 12px;
+  line-height: 155%;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.payment-date {
+  color: $typography-text-3;
+  letter-spacing: 0.015em;
+  font-size: 12px;
+  line-height: 155%;
+}
+.timeline-header-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 155%;
+
+  align-items: center;
+  letter-spacing: 0.035em;
+  color: #2f353b;
+  padding-left: 15px;
+}
+.timeline-item-details {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  justify-content: space-between;
+}
+.breakdown-header-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+
+  align-items: center;
+  letter-spacing: 0.035em;
+  color: #2f353b;
+}
+
+.timeline-details-container {
+  border-left: 1px solid #dcdfe3;
+  width: 380px;
+  max-width: 100%;
+  padding: 12px;
+  padding-left: 0px;
+}
+
+.breakdown-values-text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 155%;
+  display: flex;
+  align-items: flex-end;
+  justify-items: right;
+  justify-content: right;
+  letter-spacing: 0.035em;
+  color: #323b4b;
+  margin-left: 10%;
+}
+#breakdown-container {
+  display: flex;
+  margin-top: 50px;
+  margin-left: -130px;
+  flex-direction: column;
+  width: 350px;
+  justify-content: space-between;
+}
+.scheduled-payment-wrapper {
+  margin-bottom: 20px;
+}
+.scheduled-payments-info-message-two {
+  margin-left: 66px;
+  margin-top: -70px;
+  padding-left: 10px;
+  padding-right: 2px;
+  border-left: 1px solid #dcdfe3;
+}
+.scheduled-payments-info-message-three {
+  margin-left: 230px;
+  margin-top: -72px;
+  padding-left: 30px;
+
+  border-left: 1px solid #dcdfe3;
+}
+
+.completed-payments-info-message-three {
+  margin-left: 230px;
+  margin-top: -72px;
+  padding-left: 10px;
+  border-left: 1px solid #dcdfe3;
+}
+
+.breakdown-values-text-column-two {
+  margin-left: 150px;
+  margin-top: -18px;
+  padding-left: 30px;
+}
+.greyline {
+  width: 2px;
+  height: 45px;
+  opacity: 0.5;
+  border: 1px solid #dcdfe3;
+}
+.payment-amounts {
+  color: $typography-text-2;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-amount {
+  color: $typography-text-2;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+}
+
+.payment-type.green {
+  color: $accent-success-800;
+}
+.transaction-amount.green {
+  color: $accent-success-800;
+}
+
+.running-balance {
+  width: 115px;
+  color: $typography-text-2;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  font-weight: bold;
+}

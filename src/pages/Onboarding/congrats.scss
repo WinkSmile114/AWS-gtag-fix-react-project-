@@ -1,0 +1,146 @@
+@import '../../common-styles.scss';
+#congrats-wrapper {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#congrats-image {
+  width: auto;
+  height: 250px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+#congrats-title {
+  color: $typography-text-2;
+  letter-spacing: 0.015em;
+  font-family: 'airbnb-cereal-medium';
+  font-size: 36px;
+  line-height: 125%;
+}
+.next-message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 35px 40px;
+  padding-top: 2px;
+  margin-top: -22px;
+  width: 500px;
+  margin-left: 58px;
+}
+.explanation-text {
+  color: #00834f;
+  // font-family: 'airbnb-cereal-light';
+  font-family: 'causten-light';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  // display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+  margin-top: -1px;
+  padding-left: 20px;
+}
+.next-message-container-text {
+  background: #edf7f0;
+  box-sizing: border-box;
+  border: 1px solid #c3e6cb;
+  border-radius: 17px;
+  padding: 18px 18px;
+  text-align: center;
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  // justify-content: space-between;
+  width: 420px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  // // padding-bottom: 8px;
+  margin-bottom: 15px;
+  // margin-left: 30px;
+}
+#circle-congrats {
+  width: 36px;
+  height: 36px;
+  background: #21b17d;
+  border-radius: 50%;
+  padding: 8px;
+}
+.whats-next-text {
+  font-style: normal;
+  font-family: 'causten-medium';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  letter-spacing: 0.015em;
+  color: #323b4b;
+}
+
+#congrats-message {
+  color: $typography-text-3;
+  letter-spacing: 0.035em;
+  font-size: 16px;
+  line-height: 155%;
+  font-family: 'causten-regular';
+  font-weight: normal;
+}
+
+#congrats-approved-number {
+  color: #653494;
+  // color: $accent-success-800;
+  letter-spacing: 0.015em;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 125%;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .next-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 12px;
+    gap: 36px;
+    width: 335px;
+    height: 276px;
+    background: #ffffff;
+
+    box-shadow: 0px 35px 60px rgba(21, 21, 56, 0.03);
+    border-radius: 20px;
+    margin: auto;
+    padding-top: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .next-message-container-text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 18px;
+    gap: 16px;
+    width: 311px;
+    height: 102px;
+    background: #edf7f0;
+    border: 1px solid #c3e6cb;
+    border-radius: 17px;
+
+    flex: none;
+    margin-top: -24px;
+    margin-bottom: -14px;
+  }
+  #circle-congrats {
+    margin-top: 15px;
+  }
+  .explanation-text {
+    padding-left: 5px;
+  }
+}

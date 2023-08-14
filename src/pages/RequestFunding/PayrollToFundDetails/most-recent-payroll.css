@@ -1,0 +1,65 @@
+.most-recent-payroll-info {
+  color: #4e5d78;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .most-recent-payroll-info {
+    font-size: 12px;
+  }
+}
+
+.most-recent-payroll-info img {
+  margin-right: 3px;
+}
+
+.most-recent-payroll-divider {
+  background-color: black;
+  height: 5px;
+  width: 5px;
+  border-radius: 4px;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+#refresh-icon {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#most-recent-payroll-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+#most-recent-payroll-title div {
+  font-family: 'airbnb-cereal-medium';
+  color: #7265ad;
+}
+
+#most-recent-payroll-wrapper {
+  margin-bottom: 13px;
+}
+
+.more-funding #most-recent-payroll-wrapper {
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 13px;
+}
+.most-recent-payroll-info-message {
+  color: #4e5d78;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .most-recent-payroll-info-message {
+    font-size: 12px;
+  }
+}

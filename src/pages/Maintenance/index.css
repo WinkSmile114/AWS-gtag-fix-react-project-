@@ -1,0 +1,26 @@
+#maintenance-wrapper {
+  background: white;
+  text-align: center;
+  height: 2000px;
+  max-height: 100%;
+  padding-top: 150px;
+}
+
+#root {
+}
+
+#maintenance-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 125%;
+  color: #323b4b;
+  font-family: 'airbnb-cereal-medium';
+}
+
+#maintenance-message {
+  color: #4e5d78;
+  font-size: 16px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  font-family: 'airbnb-cereal-light';
+}

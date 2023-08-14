@@ -1,0 +1,242 @@
+#sign-up-outer-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20%;
+  background: linear-gradient(167deg, #f5f5f5 38%, rgba(243, 172, 255, 0.2) 100%);
+}
+
+#pay-on-time-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  #sign-up-outer-wrapper {
+    gap: 20%;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  #sign-up-outer-wrapper {
+    gap: 5%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #sign-up-outer-wrapper {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+  }
+
+  #pay-on-time-section {
+    display: none;
+  }
+}
+
+#sign-up-background-image {
+  position: absolute;
+}
+
+@media screen and (max-width: 900px) {
+  #sign-up-background-image {
+    display: none;
+  }
+}
+
+.signup-input {
+  width: 150px;
+  padding: 12px 20px;
+  margin: 8px 8px 10px 10px;
+  box-sizing: border-box;
+}
+
+.name-inputs {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  gap: 20px;
+}
+
+.input-info-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #323b4b;
+  font-size: 12px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+#accept-conditions-message {
+  margin-left: 5px;
+}
+
+.password-info-message-two {
+  margin-left: 160px;
+  margin-top: -55px;
+}
+.password-info-message-three {
+  margin-left: 300px;
+  margin-top: -55px;
+  margin-bottom: 45px;
+}
+
+.password-info-icon {
+  margin-right: 10px;
+}
+
+#signup-section-wrapper {
+  margin: 0px;
+  margin-bottom: 40px;
+  width: 469px;
+  max-width: 100%;
+}
+
+#pay-on-time-title {
+  /* font-size: 48px;
+  line-height: 125%;
+  font-family: 'airbnb-cereal-medium';  
+  letter-spacing: 0.015em;
+  color: #323B4B; */
+  width: 280px;
+  font-family: "causten-bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #323b4b;
+  margin-bottom: -1%;
+}
+
+.checkbox-design {
+  height: 15px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+}
+
+.terms-design {
+  margin-top: 12px;
+  align-items: center;
+  cursor: pointer;
+  text-decoration-line: none;
+  /* font-family: 'airbnb-cereal-medium'; */
+  font-family: "causten-regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.015em;
+  color: #323b4b;
+}
+.terms-design-error {
+  margin-top: 12px;
+  align-items: center;
+  cursor: pointer;
+  text-decoration-line: none;
+  font-family: "causten-regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.015em;
+  color: #323b4b;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+#pay-on-time-subtitle {
+  font-family: "causten-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.035em;
+  color: #4e5d78;
+}
+.payroll-companies-section {
+  margin-top: -18%;
+  padding-bottom: 30%;
+}
+#payroll-companies {
+  font-family: Causten;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 125%;
+  /* identical to box height, or 30px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.025em;
+
+  /* Typhograpy/Text - 2 */
+
+  color: #323b4b;
+}
+
+#application-steps {
+  margin-left: -83px;
+}
+
+.password-error-text {
+  font-family: "causten-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 155%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.045em;
+  color: #323b4b;
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .password-error-text {
+    font-size: 10px;
+  }
+  .password-info-message-three {
+    margin-left: 220px;
+    margin-top: -52px;
+    margin-bottom: 45px;
+  }
+  .password-info-message-two {
+    margin-left: 120px;
+    margin-top: -52px;
+  }
+}
+
+.password-icon {
+  margin-right: 8px;
+}
+
+/* .checkbox-design{
+  width: 23px;
+  height: 23px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 10px;
+  background-color: white;
+  border-color:  #4E5D78;
+  outline: 5px ;
+  border: 5px;
+  display: inline-block;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+ */

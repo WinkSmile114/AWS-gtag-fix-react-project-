@@ -1,0 +1,46 @@
+@import '../../../../common-styles.scss';
+
+.repayment-guide-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.repayment-guide-row.first-row {
+  background-color: #fafbfc;
+  font-size: 12px;
+  line-height: 155%;
+  color: $typography-text-3;
+}
+
+.repayment-guide-column-1 {
+  width: 100px;
+  background-color: #fafbfc;
+  box-shadow: inset -1px 0px 0px #e9e9e9, inset 0px -1px 0px #e9e9e9;
+  padding: 15px 10px 15px 20px;
+  font-size: 12px;
+  line-height: 155%;
+  color: $typography-text-3;
+}
+.repayment-guide-column-2 {
+  width: 200px;
+  box-shadow: inset 0px -1px 0px #e9e9e9;
+  padding: 15px 10px 15px 20px;
+  color: $typography-text-2;
+  font-size: 14px;
+  line-height: 155%;
+}
+.repayment-guide-column-3 {
+  width: 200px;
+  box-shadow: inset 0px -1px 0px #e9e9e9;
+  padding: 15px 10px 15px 20px;
+  color: $typography-text-2;
+  font-size: 14px;
+  line-height: 155%;
+}
+
+#repayment-guide-wrapper {
+  border: 1px solid #dcdfe3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden;
+}

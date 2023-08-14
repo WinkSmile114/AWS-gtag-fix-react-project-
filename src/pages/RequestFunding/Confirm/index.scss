@@ -1,0 +1,329 @@
+@import '../../../common-styles.scss';
+
+.confirmation-info-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.confirmation-info-label {
+  font-size: 14px;
+  line-height: 155%;
+  color: #2f353b;
+  //color: #000000;
+  letter-spacing: 0.035em;
+  // margin-left: -25px;
+}
+
+.confirmation-info-value {
+  font-family: 'causten-regular';
+  font-size: 16px;
+  line-height: 155%;
+  font-weight: 500;
+  color: #323b4b;
+  //color: #000000;
+  text-align: right;
+  margin-left: 3px;
+  letter-spacing: 0.035em;
+  // margin-right: -105px;
+}
+
+#confirm-container {
+  margin: auto;
+  margin-top: 40px;
+}
+#confirm-container-repeat-funding {
+  margin: auto;
+  max-width: 100%;
+  margin-left: 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#confirm-highlights {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.confirm-label-total-loan {
+  color: #323b4b;
+  font-size: 14px;
+  font-family: 'airbnb-cereal-light';
+  letter-spacing: 0.035em;
+}
+.amount-design {
+  font-family: 'causten-bold';
+  font-weight: 700;
+}
+.confirm-label-total-loan-amount {
+  color: #323b4b;
+  font-size: 14px;
+  font-family: 'airbnb-cereal-light';
+}
+
+.repeat-funding {
+  color: #4e5d78;
+}
+
+.funding-amount-color {
+  color: #4e5d78;
+}
+
+.confirm-highlight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f2fa;
+  border-radius: 12px;
+}
+.repeat-funding {
+  margin: 0;
+}
+
+.confirm-highlight-label {
+  font-family: 'airbnb-cereal-book';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21.7px;
+  text-align: center;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: #4e5d78;
+
+  letter-spacing: 0.035em;
+
+  // color: #000000;
+}
+.text-and-icon-wrapper {
+  display: flex;
+
+  border-radius: 8px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: -10px;
+}
+.info-text-label {
+  font-size: 14.5px;
+  line-height: 155%;
+  color: #653494;
+  letter-spacing: 0.035em;
+}
+.info-text-label:hover {
+  cursor: pointer;
+}
+.confirm-highlight-value {
+  font-family: 'airbnb-cereal-medium';
+  font-weight: 500;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 30px;
+  /* identical to box height */
+  letter-spacing: 0.025em;
+  text-align: center;
+
+  /* Primary/Purple - 700 (Main) */
+
+  color: #7265ad;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+// .confirmation-info-value .payro-select-wrapper {
+//   height: 23px;
+// }
+.confirmation-info-value #select-content {
+  padding: 8px 12px 8px 12px;
+}
+
+.funding-date {
+  color: #653494;
+  background: #f4f2fa;
+  border-radius: 7px;
+  padding: 5px 5px;
+  text-align: center;
+  align-items: center;
+  width: 450px;
+  height: 59px;
+  display: flex;
+  flex-direction: column;
+  // padding-bottom: 8px;
+  margin-bottom: 28px;
+  margin-left: -12px;
+}
+.funding-date-more {
+  color: #653494;
+  background: #f4f2fa;
+  border-radius: 7px;
+  padding: 5px 5px;
+  text-align: center;
+  align-items: center;
+  width: 450px;
+  height: 59px;
+  display: flex;
+  flex-direction: column;
+  // padding-bottom: 8px;
+  margin-top: 5px;
+  margin-bottom: 28px;
+  margin-left: 10px;
+}
+.ach-container {
+  border: 1px solid #dcdfe3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 1px 29px;
+  width: 450px;
+  margin-left: -8px;
+}
+.ach-container-more {
+  border: 1px solid #dcdfe3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  // margin-bottom: 18px;
+  padding: 1px 15px;
+  width: 473px;
+  //  margin-left:-8.4px;
+}
+.ach-header-text {
+  font-family: 'airbnb-cereal-medium';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  color: #2f353b;
+}
+.ach-span {
+  padding-left: 5px;
+}
+.ach-text {
+  font-family: 'airbnb-cereal-medium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  margin-top: -1px;
+  color: #323b4b;
+}
+.grey-square {
+  height: 14px;
+  width: 16px;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
+.grey-square:hover {
+  cursor: pointer;
+}
+.funding-date-message {
+  font-family: 'airbnb-cereal-medium';
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.0005em;
+  margin-top: 5px;
+  // margin-bottom: 4px;
+}
+
+.funding-date-explanation {
+  margin-top: -15px;
+  letter-spacing: 0.045em;
+  font-family: 'airbnb-cereal-light';
+  font-size: 14.5px;
+}
+.get-funded-button-onboarding {
+  margin-left: 15px;
+}
+.get-funded-button-wrapper {
+  margin-left: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  .confirmation-info-value {
+    // font-family: "airbnb-cereal-medium";
+    font-size: 16px;
+    line-height: 155%;
+    color: $typography-text-2;
+    text-align: right;
+    margin-left: 3px;
+    letter-spacing: 0.035em;
+    margin-right: 1px;
+  }
+  .confirm-label-total-loan {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .confirm-highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f2fa;
+
+    border-radius: 12px;
+    height: 80px;
+    padding: 12px 10px 12px 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .funding-date {
+    max-width: 100%;
+    margin-left: 2px;
+    padding-left: 11px;
+    padding-right: 11px;
+    height: fit-content;
+  }
+  .funding-date-more {
+    max-width: 100%;
+
+    margin-left: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+  }
+  .ach-container {
+    max-width: 100%;
+    margin-left: 2px;
+  }
+  .ach-container-more {
+    max-width: 100%;
+  }
+  .get-funded-button-wrapper {
+    margin-left: 0px;
+  }
+  .funding-date-message {
+    font-size: 13.5px;
+  }
+  .funding-date-explanation {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .confirmation-info-label {
+    font-size: 14px;
+    line-height: 155%;
+    color: #2f353b;
+    //color: #000000;
+    letter-spacing: 0.035em;
+    margin-left: 1px;
+  }
+  #confirm-container-repeat-funding {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+}

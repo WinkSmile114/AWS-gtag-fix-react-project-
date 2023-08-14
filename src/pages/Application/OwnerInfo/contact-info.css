@@ -1,0 +1,34 @@
+.owner-info-body {
+  margin: auto;
+}
+
+.owner-info-name-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact-form-wrapper {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e4e3e3;
+  padding-bottom: 21px;
+  /* animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
+}
+
+.radio-input {
+  margin-right: 8px;
+}
+
+.radio-label {
+  margin-right: 20px;
+}
+
+#owner-header {
+  margin-top: 20px;
+}
+
+.social-security-wrapper {
+  padding: 5px;
+}

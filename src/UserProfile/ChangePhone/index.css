@@ -1,0 +1,16 @@
+.cancel-design {
+  color: red;
+  cursor: pointer;
+  margin-left: 195px;
+
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cancel-design {
+    color: red;
+    cursor: pointer;
+    margin-left: 150px;
+    font-size: 14px;
+  }
+}

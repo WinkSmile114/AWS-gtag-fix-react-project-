@@ -1,0 +1,128 @@
+@import '../../../common-styles.scss';
+
+#close-modal-x {
+  margin: 15px;
+}
+
+#contract-outer-container {
+  border: 1px solid grey;
+}
+
+#contract-wrapper {
+  padding: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#signature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signature-container p {
+  text-align: center;
+}
+
+#signature-container h2 {
+  text-align: center;
+}
+
+#contract-text {
+  height: 400px;
+  max-height: 400px;
+  overflow: scroll;
+}
+
+#signature-disclaimer {
+  font-size: 11px;
+}
+
+#signature-wrapper {
+  margin-top: 1px;
+  text-align: center;
+}
+#your-signature-label {
+  letter-spacing: 0.025em;
+  font-size: 12px;
+  line-height: 16px;
+  color: $typography-text-3;
+  margin-bottom: -50px;
+  margin-top: 0px;
+}
+#actual-signature {
+  font-family: 'indie-flower';
+  font-size: 37px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#scroll-instructions {
+  color: $accent-waring-800;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  font-family: 'airbnb-cereal-medium';
+}
+
+#force-load-of-font {
+  color: white;
+  font-family: 'indie-flower';
+}
+
+#contract-text::-webkit-scrollbar {
+  width: 5px;
+}
+
+#contract-text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#canvas-wrapper {
+  maxwidth: 100%;
+  overflow: scroll;
+}
+
+#canvas-wrapper::-webkit-scrollbar {
+  width: 0px;
+}
+
+#canvas-wrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+#canvas-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#signed-text {
+  color: $accent-success-800;
+}
+
+#contract-text h1 {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+#contract-text h3 {
+  font-size: 11px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  font-weight: normal;
+  font-style: italic;
+}
+#contract-text h5 {
+  font-size: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: normal;
+  font-style: italic;
+}
+#contract-text p {
+  font-size: 10px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}

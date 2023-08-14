@@ -1,0 +1,9 @@
+#skip-me {
+  text-decoration: underline;
+  text-decoration-color: #9d8af3;
+  width: 400px;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: -17px;
+  cursor: pointer;
+}

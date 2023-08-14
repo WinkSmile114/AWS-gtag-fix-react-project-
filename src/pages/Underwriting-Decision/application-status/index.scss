@@ -1,0 +1,92 @@
+@import '../../../common-styles.scss';
+
+.credit-number-label {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 155%;
+  color: #323b4b;
+  opacity: 0.7;
+}
+
+.credit-number {
+  font-size: 32px;
+  line-height: 125%;
+  color: #7265ad;
+  letter-spacing: 0.015em;
+  margin-top: 5px;
+  font-family: 'airbnb-cereal-medium';
+}
+.credit-amount-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#funding-status-text {
+  color: $typography-text-2;
+  //  font-family: 'airbnb-cereal-medium';
+  font-size: 36px;
+  line-height: 125%;
+  letter-spacing: 0.015em;
+  margin-top: 10px;
+  text-align: center;
+}
+#funding-status-icon {
+}
+#funding-status-header-wrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 538px;
+  max-width: 100%;
+}
+#funding-status-header-wrapper-under-review {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 538px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 45px;
+}
+.application-status-subtitle {
+  color: $typography-text-3;
+  font-size: 16px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+.schedule-container {
+  // background-color: #FFFFFF;
+  //border-radius: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+.under-review-additional-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #323b4b;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  text-align: center;
+}
+.phone-number {
+}
+.phone-icon-under-review {
+  margin-bottom: -3px;
+  margin-right: 10px;
+}

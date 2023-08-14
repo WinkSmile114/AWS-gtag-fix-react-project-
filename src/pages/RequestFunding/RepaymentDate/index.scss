@@ -1,0 +1,400 @@
+@import '../../../common-styles.scss';
+
+.week-choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .week-choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+.repeat-funding-input-and-another-column {
+  display: flex;
+  align-items: center;
+}
+
+.week-choice {
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  max-width: 130px;
+  width: 130px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  align-items: center;
+}
+
+.week-option-label {
+  font-family: 'causten-regular';
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  color: $typography-text-2;
+  letter-spacing: 0.3px;
+}
+.week-option-date {
+  color: $typography-text-3;
+  font-size: 12px;
+  line-height: 155%;
+  /* identical to box height, or 19px */
+
+  letter-spacing: 0.045em;
+}
+.total-cost-label {
+  font-family: 'airbnb-cereal-light';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 155%;
+  letter-spacing: 0.03em;
+  color: #4e5d78;
+  margin-top: 10px;
+}
+
+.interest-and-fee {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  color: #4c2d6a;
+}
+
+.unavailable .week-option-date {
+  color: red;
+}
+
+.week-choice.purple-background-color .week-option-label {
+  font-family: 'airbnb-cereal-medium';
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  color: $primary-purple-800;
+  letter-spacing: 0.3px;
+}
+
+.week-choice.purple-background-color .week-option-date {
+  color: $primary-purple-700;
+  font-size: 12px;
+  line-height: 155%;
+  /* identical to box height, or 19px */
+
+  letter-spacing: 0.045em;
+}
+
+.payroll-funding {
+  // grid-column: 2 / 3;
+  // grid-row: 1 / 2;
+}
+
+.total-interest {
+  color: #2f353b;
+  font-size: 14px;
+}
+
+.total-interest-val {
+}
+
+.one-time-processing {
+  letter-spacing: 0.035em;
+  font-size: 12px;
+  line-height: 155%;
+
+  /* Typhograpy/Text - 4 */
+
+  color: #8a94a6;
+}
+
+.one-time-processing-val {
+}
+
+.your-numbers-divider {
+  border-top: 1px solid #dcdfe3;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.total-repayment {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  color: #2f353b;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.total-repayment-val {
+  font-family: 'causten-bold';
+  font-style: normal;
+  font-size: 48px;
+  line-height: 108%;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #653494;
+}
+.total-repayment-val-confirm {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;;
+  margin: 0;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #653494;
+}
+
+.interest-rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fixed-fee {
+  font-family: 'airbnb-cereal-medium';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #adb4bd;
+  border: 5px solid #adb4bd;
+  border-radius: 3px;
+}
+.info-icon {
+  margin-left: 10px;
+  margin-top: 10x;
+}
+
+@media only screen and (max-width: 600px) {
+  .interest-rate {
+    background-color: white;
+    color: $typography-text-4;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+#interest-rate-frequency {
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  // line-height: 21px;
+  display: flex;
+  //align-items: center;
+  color: #4e5d78;
+}
+
+.your-numbers-label {
+  line-height: 155%;
+  // color: #2F353B;
+  letter-spacing: 0.035em;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.035em;
+  color: #000000;
+}
+.your-numbers-label.one-time-processing {
+  font-size: 12px;
+  line-height: 155%;
+  color: #4e5d78;
+  letter-spacing: 0.035em;
+  font-family: 'airbnb-cereal-light';
+  font-family: 400;
+  margin-top: -10px;
+}
+
+.your-numbers-label.one-time-processing.bold {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 155%;
+  color: #4e5d78;
+  letter-spacing: 0.035em;
+  margin-left: 4px;
+  font-family: 'causten-bold';
+}
+.payroll-funding-values-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.your-numbers-val {
+  // font-weight: 500;
+  font-size: 16px;
+  line-height: 155%;
+  letter-spacing: 0.035em;
+  // color: #323b4b;
+  font-family: 'causten-regular';
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  margin-left: 8px;
+}
+
+.interest-rate p {
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+#interest-rate-number {
+  font-family: 'causten-bold';
+  font-size: 16px;
+  line-height: 23px;
+  display: inline;
+  align-items: center;
+  text-align: center;
+  color: $typography-text-1;
+  margin-right: 7px;
+}
+
+#interest-rate-type {
+  color: $accent-success;
+  font-size: 12px;
+  line-height: 155%;
+  margin-top: 10px;
+  /* identical to box height, or 19px */
+
+  letter-spacing: 0.045em;
+  font-family: 'airbnb-cereal-medium';
+}
+#step-3-question {
+  color: #2f353b;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+  font-family: 'airbnb-cereal-medium';
+}
+
+#open-guide-icon {
+  margin-right: 5px;
+}
+#open-guide-icon.open-it {
+  transform: rotate(180deg);
+}
+
+.total-repayment.more-funding {
+  font-size: 12px;
+  line-height: 155%;
+  font-weight: 400;
+  color: #4e5d78;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+.total-repayment-val.more-funding {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0.025em;
+  font-weight: 800;
+  font-family: 'causten-bold';
+  margin: 0px;
+  margin-bottom: 24px;
+  color: #574b89;
+}
+.total-payback-wrapper-more-funding {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .total-repayment.more-funding {
+    font-size: 12px !important;
+    line-height: 155%;
+    color: #4e5d78;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .total-repayment-val.more-funding {
+    text-align: center;
+    letter-spacing: 0.025em;
+    margin: 0px;
+    color: #574b89;
+  }
+}
+.repeat-funding-input-and-another-column {
+  margin-top: 20px;
+}
+#more-funding-repayment-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#payment-repayment-date .payro-select-wrapper {
+  width: 422px;
+}
+#more-funding-repayment-date .payro-select-wrapper {
+  width: 255px;
+}
+@media only screen and (max-width: 600px) {
+  #more-funding-repayment-date .payro-select-wrapper {
+    width: 200px;
+  }
+}
+#more-funding-fixed-rate {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#more-funding-fixed-rate p {
+  margin: 0px;
+}
+
+#rate-line-1 {
+  letter-spacing: 0.045em;
+  color: #8a94a6;
+  font-size: 12px;
+  line-height: 155%;
+}
+#rate-line-2 {
+  letter-spacing: 0.015em;
+  color: #8a94a6;
+  font-size: 16px;
+  line-height: 21px;
+}
+@media only screen and (max-width: 600px) {
+  .your-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .your-numbers-label {
+    font-size: 14px;
+  }
+  .your-numbers-val {
+  }
+  .total-repayment {
+    font-size: 14px;
+  }
+  .your-numbers-label.one-time-processing.bold {
+  }
+  .your-numbers-label.one-time-processing {
+    font-size: 12px;
+  }
+}
+
+#processing-fee-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
