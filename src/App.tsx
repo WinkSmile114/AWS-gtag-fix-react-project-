@@ -81,11 +81,11 @@ import TagManager from 'react-gtm-module';
 //   const TRACKING_ID = "UA-281794877-1"; // OUR_TRACKING_ID
 //   ReactGA.initialize('UA-281794877-1');
 
-// const tagManagerArgs={
-//     gtmId:'GTM-KRNZPVC',
-//     dataLayer: {event: 'pageview'},
-// }
-// TagManager.initialize(tagManagerArgs)
+const tagManagerArgs={
+    gtmId:'GTM-KRNZPVC',
+    dataLayer: {event: 'pageview'},
+}
+TagManager.initialize(tagManagerArgs)
 
 function App() {
   // const useAnalyticsEventTracker = (category="Blog category") => {
