@@ -14,5 +14,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
