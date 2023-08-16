@@ -75,17 +75,17 @@ import MySettings from './UserProfile/MySettings/mySettings';
 import WireInfo from './pages/WireInfo';
 import { useIdleTimer } from 'react-idle-timer';
 import ChangePhone from './UserProfile/ChangePhone';
-import TagManager from 'react-gtm-module';
+// import TagManager from 'react-gtm-module';
 
 // import ReactGA from 'react-ga';
-//   const TRACKING_ID = "UA-281794877-1"; // OUR_TRACKING_ID
+// //   const TRACKING_ID = "UA-281794877-1"; // OUR_TRACKING_ID
 //   ReactGA.initialize('UA-281794877-1');
 
-const tagManagerArgs={
-    gtmId:'GTM-P88NWTZW',
-    dataLayer: {event: 'pageview'},
-}
-TagManager.initialize(tagManagerArgs)
+// const tagManagerArgs={
+//     gtmId:'GTM-P88NWTZW',
+//     dataLayer: {event: 'pageview'},
+// }
+// TagManager.initialize(tagManagerArgs)
 
 function App() {
   // const useAnalyticsEventTracker = (category="Blog category") => {
