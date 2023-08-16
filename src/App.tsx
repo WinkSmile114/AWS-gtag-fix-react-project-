@@ -82,7 +82,7 @@ import TagManager from 'react-gtm-module';
 //   ReactGA.initialize('UA-281794877-1');
 
 const tagManagerArgs={
-    gtmId:'GTM-KRNZPVC',
+    gtmId:'GTM-P88NWTZW',
     dataLayer: {event: 'pageview'},
 }
 TagManager.initialize(tagManagerArgs)
