@@ -87,7 +87,6 @@
   <script>
     // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/ugisjp0n'
     (function () {
-      const APP_ID = 'ugisjp0n';
       var w = window;
       var ic = w.Intercom;
       if (typeof ic === 'function') {
@@ -120,6 +119,7 @@
         }
       }
     });
+    const APP_ID = 'ugisjp0n';
     window.Intercom('boot', {
       app_id: APP_ID,
       //Website visitor so may not have any user related info
